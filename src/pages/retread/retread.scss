@@ -1,0 +1,235 @@
+page-retread{
+.custom-title-label{
+    text-align: left;
+    font-style: normal;
+    font-size: 2.0em;
+    font-weight: bolder;
+    color: #27509b;
+}
+.custom-title-label-end{
+    text-align: center;
+    font-style: normal;
+    font-size: 2.0em;
+    font-weight: bolder;
+    color: #27509b;
+}
+.custom-subtitle-label{
+    text-align: right;
+    font-style: normal;
+    font-size: 1.0em;
+    font-weight: bold;
+}
+.normal-col{
+    border:1px solid;
+    padding:0px;
+    background-color: #ffffff;//#adccff;
+    text-align:center;
+    border-bottom-color: #999898;
+    border-top-color: #999898;
+    border-left-color: #ffffff;
+    border-right-color: #ffffff;
+    
+  }
+  .normal-col-md{
+    border:1px solid;
+    padding:0px;
+    background-color: #ffffff;//#adccff;
+    text-align:center;
+    border-bottom-color: #999898;
+    border-top-color: #999898;
+    border-left-color: #ffffff;
+    border-right-color: #999898;
+    
+  }
+.formfield input,
+.formfield textarea {
+  font: 1.1em ;
+  color: black;
+  border: 0;
+  background: none;
+  margin-left: 0;
+  padding-left: 0;
+  font-size: 1em;
+  margin-top: 0;
+//   font-weight: bold;
+}
+.formfield .error {
+    font-size: 1em;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    color: red
+  }
+  
+  .formfield.invalid {
+    background: #ffdfdf
+  }
+  
+  .formfield.invalid input {
+    background: #ffdfdf !important
+  }
+  
+  .formfield.error {
+    background-color: #ffe5e5
+  }
+  .formfield input[disabled],
+  .additional-options2 .formfield input[disabled] {
+    border: 0;
+    font-size: 1em;
+    height: 2.25em;
+    width: 84%;
+    width: calc(100% - 20px);
+    text-align: left;
+    padding: 0 .5em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+  }
+  .inputgrid .freelabel-formfield input {
+    font-size: 14px;
+    height: 2em;
+    padding: 0.325em 0.375em 0 0.375em
+  }
+  .inputgrid .freelabel-formfield.currency input {
+    padding: 0.25em .5em 0 1.25em
+  }
+  .formfield .dollarsign {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 15px;
+    color: black;
+    line-height: 1.0em;
+    width: 15px;
+    height: 21px;
+    text-align: right
+  }
+  .formfield .percentage {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 15px;
+    color: black;
+    line-height: 1.0em;
+    width: 15px;
+    height: 21px;
+    text-align: right
+  }
+  .stacked-formfield .big-input {
+    padding: 5px 10px 0 10px;
+    height: auto;
+    font-size: 1.6em;
+    font-weight: normal;
+    font-family: Arial !important;
+    color: #333333;
+    
+  }
+.full-border { 
+    border-top: 1px solid black;
+    border-bottom: 1px solid black; 
+    border-right: 1px solid black; 
+    border-width: 2px;
+  }
+
+.custom-arrow{
+  width: 270px; 
+  margin-top:30px;
+  height:25px; 
+  display: inline-block;
+  background-color: white
+}
+.result-label{
+  text-align:center;
+  font-size:2.6em;
+  font-weight:bolder;
+ 
+}
+.bottom-label{
+  text-align:center;
+  font-size:2.0em;
+  font-weight:bolder;
+  color:black;
+}
+@media(min-width:900px) {
+    .custom-title-label{
+      font-size: 24px;
+      font-weight: bolder;
+      text-align: left;
+    }
+    .custom-title-label-end{
+      font-size: 24px;
+      font-weight: bolder;
+    }
+    .custom-subtitle-label{
+      font-size: 14px;
+      margin-left: -15px;
+      text-align: right;
+    }
+    .segment-button {
+      border-style: none;
+      // border-color: black;
+      border-width: medium;
+    }
+    
+    .segment-button:first-of-type {
+      margin-left: 50px;
+      margin-right: 50px;
+      line-height: 4.4rem;
+      height: 100%;
+      width: 50%;
+    }
+    .segment-button:not(:first-of-type) {
+     margin-left: 50px;
+     margin-right: 50px;
+       line-height: 4.4rem;
+      height: 100%;
+      width: 50%;
+    }
+    .segment-button:last-of-type {
+      margin-left: 50px;
+      margin-right: 50px;
+      line-height: 4.4rem;
+      height: 100%;
+      width: 50%;
+    }
+
+   }  
+/*iPhone 6 and iPhone 6+ portrait and landscape*/
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px){ 
+.custom-title-label{
+  font-size: 10px;
+  font-weight: bold;
+  text-align: right;
+  // margin-left: 30px;
+}
+.custom-title-label-end{
+  font-size: 10px;
+  font-weight: bold;
+  text-align: right;
+  
+}
+.custom-subtitle-label{
+  font-size: 10px;
+  text-align: left;
+}
+.custom-arrow{
+  width: 170px; 
+  margin-top:10px;
+  height:25px; 
+  display: inline-block;
+  background-color: white
+}
+.result-label{
+  text-align:left;
+  font-size:1.3em;
+  font-weight:bold;
+ 
+}
+.bottom-label{
+  text-align:center;
+  font-size:1.0em;
+  font-weight:bolder;
+  color:black;
+}
+
+}
+}

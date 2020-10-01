@@ -1,0 +1,41 @@
+.label_text{
+    // background-color: #8c8c8c;
+     height : 100%;
+     display: flex;
+     color:#545556 !important;
+     align-items: center;
+     font-weight: bold;
+   }
+   
+   select::-ms-expand {
+     //display:none;
+     background-color: transparent;
+     border-color: transparent;
+     border: none;
+   }
+   
+   
+   div.center
+   {
+     width: 400px;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 60px;
+   }
+   
+   .label-md{
+     margin-left: 20px !important;
+   }
+   
+   
+   .outer-content{
+     //background: url("../../assets/img/BIB-MICHELIN.jpg") no-repeat;
+     background-position: center;
+   
+   }
+   
+   .item[no-lines].bottom-borders { 
+     border-bottom: 1px solid #FCE500; 
+     border-width: 2px;
+   }

@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar  color="michelinblue" >
+      <button ion-button menuToggle>
+        <ion-icon name="menu" style="font-size: xx-large"></ion-icon>
+      </button>
+      <!--<img style="width: 70px; height:25px; display: inline-block; background-color: white" src="assets/img/michelinimg.png">-->
+  
+      <ion-title class="header_text">{{"Retread/Rebuy"|translate}}</ion-title>
+      
+      <ion-buttons end>
+     
+      </ion-buttons>
+    </ion-navbar>
+    <ion-segment [(ngModel)]="lifeCycle" style="background:rgb(244, 244, 244);" color="dark">
+        <ion-segment-button class="segment-button" max-width-40 value="firstLife"  (click)="saveTireSegmentInfo($event, 'secondLife')" style="font-size: 1.0em;color:dark; font-weight: bold">
+            {{'first_life' | translate}}
+        </ion-segment-button>
+        <ion-segment-button class="segment-button" value="secondLife" (click)="saveTireSegmentInfo($event, 'firstLife')"  aria-pressed="false" style="font-size: 1.0em;color:dark; font-weight: bold">
+            {{'second_life' | translate}}
+        </ion-segment-button>
+    </ion-segment>
+    
+</ion-header>
+  
+<ion-content padding>
+
+</ion-content>

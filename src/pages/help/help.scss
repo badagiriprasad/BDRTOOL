@@ -1,0 +1,372 @@
+page-help {
+    .content-wrapper {
+        max-width: 828px;
+        margin: 0 auto
+      }
+    
+      .elevated-panel {
+        border: 1px solid #DDDDDD;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 15px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 15px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0 0 15px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        border-radius: 10px;
+        padding: 1em;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+      }
+      
+      .clearfix,
+      .tools-landing-top .content-wrapper,
+      .fuel-savings-calculator .content-wrapper,
+      .x-one-weight-savings .content-wrapper,
+      .rolling-resistance-comparison .content-wrapper,
+      .save-on-fuel .content-wrapper,
+      .save-on-weight .content-wrapper,
+      .reference-videos .content-wrapper {
+        *zoom: 1
+      }
+      
+      .clearfix:after,
+      .tools-landing-top .content-wrapper:after,
+      .fuel-savings-calculator .content-wrapper:after,
+      .x-one-weight-savings .content-wrapper:after,
+      .rolling-resistance-comparison .content-wrapper:after,
+      .save-on-fuel .content-wrapper:after,
+      .save-on-weight .content-wrapper:after,
+      .reference-videos .content-wrapper:after {
+        content: "";
+        display: table;
+        clear: both
+      }
+      
+      .mb20 {
+        margin-bottom: 20px
+      }
+      
+      .mt30 {
+        margin-top: 30px
+      }
+      
+      .mb20 {
+        margin-bottom: 20px
+      }
+      
+      
+      .savings-home-mid-left {
+        width: 100%
+      }
+      
+      .floatleft {
+        float: left
+      }
+      
+      .width47pc {
+        width: 47%
+      }
+      //background: #eee
+      .stacked-formfield {
+        background: white;
+        position: relative;
+        padding-left: 0
+      }
+      
+      .floatright {
+        float: right
+      }
+      
+      .savings-home-mid-left .currency .dollarsign {
+        font-size: 48px;
+        bottom: 18px;
+        left: 7px
+      }
+      
+      .savings-home-mid-left .currency input {
+        padding-left: 26px
+      }
+      
+      @media (min-width: 705px) {
+        .savings-home-mid-left {
+          width: 45%
+        }
+      }
+      
+      
+      .mb5 {
+        margin-bottom: 10px
+      }
+
+      //Step-1 View
+      .common-button{
+        background: #FCE500;
+        border-radius: 5px;
+        font-size: 1.2em; 
+        color: #27509b; 
+        height: 10vh;
+        width: 60vh;
+        // border-color: rgb(21, 99, 216);
+        // border-width: 4px 4px 4px 4px;
+        font-weight: bold;
+        border: 2px solid map-get($colors, michelinyellow);
+        font-family: "Arial";
+      }
+      
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+  
+     
+      @media (min-width: 705px) {
+        .center-line{
+          border-width: 0 4px 0 0;
+          border-color: #FCE500;
+          background-color: white; 
+           margin-top: 50px; 
+          height: 50vh;
+          border-right: 2px solid map-get($colors, michelinblue);
+          margin-bottom:10px;
+        }
+      }
+      @media (max-width: 320px) {
+        .center-line{
+          border-width: 0 4px 0 0;
+          border-color: #FCE500;
+          background-color: white; 
+           margin-top: 50px; 
+          height: 50vh;
+          border-bottom: 2px solid map-get($colors, michelinblue);
+          margin-bottom:10px;
+        }
+      }
+      
+    
+      
+      @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px){ 
+       
+        .center-line{
+          border-width: 0 4px 0 0;
+          background-color: white; 
+           margin-top: 50px; 
+          height: 50vh;
+          border-bottom: 2px solid map-get($colors, michelinblue);
+          margin-bottom:10px;
+        }
+        .common-button{
+          background: #FCE500;
+          border-radius: 5px;
+          font-size: 1.0em; 
+          color: #27509b; 
+          height: 10vh;
+          width: 40vh;
+          // border-color: rgb(21, 99, 216);
+          // border-width: 4px 4px 4px 4px;
+          font-weight: bold;
+          border: 2px solid map-get($colors, michelinyellow);
+          font-family: "Arial";
+        }
+      }
+      @media only screen and (max-device-width: 768px), only screen and (max-device-width: 924px) and (orientation : portrait){ 
+        .center-line{
+          border-width: 0 4px 0 0;
+          background-color: white; 
+           margin-top: 50px; 
+          height: 50vh;
+          border-bottom: 2px solid map-get($colors, michelinblue);
+          margin-bottom:10px;
+        }
+      } 
+
+      //End
+      .box-full-border{
+        background-color: white; 
+        border-color:black !important;
+        border-top: 1px solid map-get($colors, black);
+        border-bottom: 1px solid map-get($colors, black);
+        border-left: 1px solid map-get($colors, black);
+        border-right: 1px solid map-get($colors, black);        
+        border-width: 1px;
+      } 
+      .custom-input-box{
+        background-color: white; 
+        border-color:#27509b !important;
+        border-top: 1px solid map-get($colors, primary);
+        border-right: 1px solid map-get($colors, primary);
+        // border-bottom: 1px solid map-get($colors, primary);
+        border-width: 2px;
+      } 
+      
+      .custom-input-box1{
+        background-color: white; 
+        border-color:#27509b !important;
+        border-top: 1px solid map-get($colors, primary);
+        border-right: 1px solid map-get($colors, primary);
+        border-bottom: 1px solid map-get($colors, primary);
+        border-width: 2px;
+      } 
+      .custom-input-box2{
+        background-color: white; 
+        border-color:#27509b !important;
+        border-top: 1px solid map-get($colors, primary);
+        border-left: 1px solid map-get($colors, primary);
+        border-bottom: 1px solid map-get($colors, primary);
+        border-width: 2px;
+      } 
+      .custom-input-value{
+        color: #27509b; flex:1; 
+        // max-width: 1000px; 
+        font-size: 1.1em;
+        font-weight: bold !important;
+        text-align: center;
+        background: #FCE500;
+      }
+      
+      .savings-home-mid-right {
+        width: 100%;
+        height: 100%;
+      }
+      
+      @media (min-width: 705px) {
+        .savings-home-mid-right {
+          width: 50%;
+          height: 100%;
+          
+        }
+      }
+      
+      .comparisons .right-column {
+        left: 110%
+      }
+      
+      .floatright,
+      .retread-applications .retread-application .application-icon,
+      .oncall .oncall-feature .application-icon {
+        float: right
+      }
+      
+      
+      .floatleft-not-phone,
+      .tools-landing-top .promo-content,
+      .x-one-weight-savings .promo-content,
+      .save-on-fuel .promo-content {
+        float: none
+      }
+      
+      @media (min-width: 705px) {
+        .floatleft-not-phone,
+        .tools-landing-top .promo-content,
+        .x-one-weight-savings .promo-content,
+        .save-on-fuel .promo-content {
+          float: left
+        }
+      }
+       
+      .annual-bill-amount {
+        font-size: 1.5em
+      }
+      
+      @media (max-width: 705px) {
+        .annual-bill-amount{
+          width : 100%
+        }
+      }
+    
+      .header-row{
+        border:0px solid white;
+        padding:0px;
+        // background-color: rgb(252, 113, 0);
+        margin-left: 1px;
+    }
+    .first-row{
+        
+        border:1px solid;
+        padding:0px;
+        background-color: #ffffff;//#adccff;
+        border-bottom-color: #999898;
+        border-top-color: #999898;
+        border-left-color: #ffffff;
+        border-right-color: #999898;
+       
+      }
+    
+      .header-row-item{
+        text-align:center;
+        color: black;
+        background: #FCE500;
+        // font-style: italic;
+        
+      }
+      .first-row-item{
+        text-align:center;
+        background-color: #ffffff;
+        font-size: 1.1em;
+        font-weight: bold;
+        // text-align:center;
+        // color: black;
+        
+      }
+      .common-label{
+        text-align:right;        
+        font-size: 1.2em;
+      }
+      .normal-col{
+        border:1px solid;
+        padding:0px;
+        background-color: #ffffff;//#adccff;
+        text-align:center;
+        border-bottom-color: #999898;
+        border-top-color: #999898;
+        border-left-color: #ffffff;
+        border-right-color: #ffffff;
+        
+      }
+      .normal-col-md{
+        border:1px solid;
+        padding:0px;
+        background-color: #ffffff;//#adccff;
+        text-align:center;
+        border-bottom-color: #999898;
+        border-top-color: #999898;
+        border-left-color: #ffffff;
+        border-right-color: #999898;
+        
+      }
+      .normal-col-centerborder{
+        border-left:1px solid;
+        padding:0px;
+        background-color: #ffffff;
+        border-left-color: #999898;
+        
+      }
+      .formula_label{
+        background:white;
+        color:#27509b;
+        font-weight:bold;
+        text-align:left;
+        // font-size:0.9em;
+    }
+    .formula_desc{
+      background:white;
+      color:#27509b;
+      text-align:left;
+    }
+    .formula_left_col{
+      background:#FCE500; 
+      width:10%;
+      display:flex;
+      justify-content: center;
+    }
+    .formula_row{
+      margin-top:20px;margin-left:2%;margin-right:2%;
+    }
+    .formula_left_col_label{
+      background:#FCE500;color:#27509b;font-weight:bolder;text-align:center;
+    }
+
+    
+    
+}

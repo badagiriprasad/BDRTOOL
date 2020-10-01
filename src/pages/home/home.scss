@@ -1,0 +1,162 @@
+page-home {
+  .michelin-yellow{
+    background-color: #FCE500;
+  }
+  .michelin-blue{
+    background-color: #27509B;
+  }
+  .michelin-white{
+    background-color: #FFFFFF;
+  }
+  .michelin-grey{
+    background-color: #D3D3D3;
+  }
+  .option-header{
+    height: 5%;
+  }
+  .option{
+    height: 19%;
+  }
+  .left-block-row{
+    height: 50%;
+  }
+  .vertical-center{
+    justify-content: center !important;
+  }
+  .main-grid{
+    padding: 0px !important;
+  }
+  .options-style{
+    width:100%;
+    font-weight: bolder;
+    font-style: italic;
+    color:black;
+    font-size: 1em;
+    text-align: left;
+    align-self: center;
+    padding-left: 2%;
+  }
+  .title-font{
+    font-weight: bolder;
+    font-style: italic;
+    padding-left: 10%;
+    color:#27509B;
+
+  }
+  .text-black{
+    color:black;
+  }
+  .option-left-block{
+    width:80%;
+    font-size: 1.5em;
+    text-align: left;
+    align-self: center;
+    font-family: Arial;
+  }
+  .option-right-block{
+    width:20%;
+    font-size: 3em;
+    text-align: center;
+    align-self: center;
+    font-family: Arial;
+  }
+   .empty-arrow {
+  flex:2;
+	display: inline-block;
+	position: relative;
+	padding: 15px;
+  width: 100%;
+  margin-top: 0px;
+}
+.header{
+  color:#FCE500;
+  font-style:italic;
+  font-weight:bolder;
+  font-size:xx-large;
+}
+.para{
+  color:white;
+  font-size:small;
+}
+
+.circle{
+  height: 1vw; 
+  width: 1vw; 
+ border: 2px solid #FCE500;
+ border-radius: 50%;
+ background-color: #FCE500;
+ display: inline-block;
+ align-self:center;
+ color:black;
+ font-size:x-small
+}
+
+.topTitleNextButton{
+  background-color: transparent;
+  font-size: 0.8em;
+  color: white;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 999px) {
+  /* rules that only apply for canvases narrower than 1000px */
+  .empty-arrow {
+	display: inline-block;
+	position: relative;
+	padding: 15px;
+  width: 100%;
+  margin-top: 0px;
+}
+
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1366px)  {
+   /* iPad rules here */
+.empty-arrow {
+  flex:2;
+	display: inline-block;
+	position: relative; 
+}
+
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px)  {
+   /* iPhone 6 rules here */
+.empty-arrow {
+	display: inline-block;
+	position: relative;
+	background: #cadbf7;
+  width: 100%;
+}
+
+}
+@media only screen and (min-device-width: 667px) and (max-device-width: 375px)  {
+   /* iPhone 6 rules here */
+.empty-arrow {
+	display: inline-block;
+	position: relative;
+	background: #cadbf7;
+  width: 100%;
+
+}
+
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+   /* iPhone, Android rules here */
+  .empty-arrow {
+    position: relative;
+    background: #cadbf7;
+   	display: inline-block;
+    width: 100%;
+  }
+
+}
+
+
+}
+.custom-alert  .alert-wrapper{
+  max-width: 430px;
+
+}
+
+.custom-alert .alert-message{
+color: red;
+}

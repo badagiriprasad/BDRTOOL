@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-navbar color="michelinblue">
+    <button ion-button icon-only menuToggle start>
+      <ion-icon name="menu" ></ion-icon>
+    </button>
+    <ion-buttons end>
+    <button class="topTitleNextButton" (click)="generatePDF();">
+      <label>{{'send_email' | translate}}</label>
+    </button>
+  </ion-buttons>
+  </ion-navbar>
+
+</ion-header>  
+
+<!-- <ion-header>
+  <ion-navbar color="michelinblue" style="padding-top:10px;">
+  </ion-navbar>
+</ion-header> -->
+
+
+<ion-content>
+
+    <ion-grid id="main-grid"style="padding:0px;height:100%">
+      <ion-row style="height:100%">
+        <ion-col style="height:100%;padding:0px;" class="michelin-blue" >
+          <ion-row class="left-block-row">
+            <ion-col style="padding:0px;">
+            <ion-row  style="height:46%">
+                <img src="assets/imgs/top_half.png"  style="width:100%;height:100%;">
+            </ion-row>
+            <ion-row  style="height:64%" class="michelin-blue">
+              <div style="align-self:center;margin:10%" class="michelin-blue">
+                <h1 class="header">
+                    <div id = "label1div"  [ngStyle]="{'height': '20px','over-flow':'scroll !important', 'font-size': fontAdjustmentService.calculateFontSize('label1div')}">
+
+                  {{"avg_cost_of_tread"|translate}}</div>
+                </h1>
+                <div id = "label1div"  [ngStyle]="{'height': '20px','over-flow':'scroll !important', 'font-size': fontAdjustmentService.calculateFontSize('label1div')}">
+
+                <p class="para">
+                  <span class="circle">{{"1"|translate}}</span>
+                    {{"text1"|translate}} 
+                </p>
+              </div>
+              <div id = "label2div"  [ngStyle]="{'height': '20px','over-flow':'scroll !important', 'font-size': fontAdjustmentService.calculateFontSize('label2div')}">
+
+                <p class="para"><span class="circle">{{"2"|translate}}</span> {{"text2"|translate}}</p>
+                </div>
+              </div>
+            </ion-row>
+          </ion-col>
+          </ion-row>
+          <ion-row class="left-block-row">
+              <img src="assets/imgs/michelin_man.png"  style="width:100%;height:100%;">
+          </ion-row>
+        </ion-col>
+        <ion-col class="empty-arrow michlein-grey" style="padding:0px;height:100%">
+          <ion-grid style="height:100%;padding:0px" class="michelin-grey vertical-center">
+          <ion-row class="option-header michelin-grey">
+              <div class="options-style">{{"options"|translate}}</div>
+          </ion-row>
+          <hr style="margin:0px;">
+          <ion-row class="option michelin-white">
+              <div class="option-left-block title-font">{{"1retreads"|translate}}</div>
+              <div class="option-right-block"><button ion-button (click)="openRetread1()">+</button></div> 
+            </ion-row>
+          <hr  style="margin:0px;">
+          <ion-row class="option michelin-white">
+              <div class="option-left-block title-font">{{"2retreads"|translate}}</div>
+              <div class="option-right-block"><button ion-button (click)="openRetread2()">+</button></div> 
+          </ion-row>
+          <hr  style="margin:0px;">
+          <ion-row class="option michelin-white">
+              <div class="option-left-block title-font">{{"3retreads"|translate}}</div>
+              <div class="option-right-block"><button ion-button (click)="openGommeGain()">+</button></div>
+            </ion-row>
+            <hr  style="margin:0px;">
+            <ion-row class="option michelin-yellow">
+                <div class="option-left-block title-font">{{"1retread"|translate}}<span style="color:black">{{"/buy_back"|translate}}</span></div>
+                <div class="option-right-block"><button ion-button (click)="openRetreadBuyPack1()">+</button></div>  
+            </ion-row>
+            <hr  style="margin:0px;">
+            <ion-row class="option michelin-yellow">
+                <div class="option-left-block title-font">{{"2retreads"|translate}}<span style="color:black">{{"/buy_back"|translate}}</span></div>
+                <div class="option-right-block"><button ion-button (click)="openRetreadBuyPack2()">+</button></div>  
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+      </ion-row>
+   </ion-grid>
+  
+  </ion-content>
+  
+  

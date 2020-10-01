@@ -1,0 +1,730 @@
+<ion-header>
+  <ion-navbar color="michelinblue">
+      <button ion-button menuToggle>
+          <ion-icon name="menu" style="font-size:  xx-large"></ion-icon>
+        </button>
+    <ion-label class="header_text">{{"help_sub_title" | translate}}</ion-label>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div>
+        <ion-row style="background:rgb(235, 235, 235); margin-left:-20px;margin-right:-20px; margin-top:-15px;">
+            <ion-col  width-25 >
+                <ion-item no-lines class="top-border">
+                    <ion-label class="common_header" style="margin-left:-10px;"><b>{{"date" | translate}}</b></ion-label>
+                </ion-item>
+                    <ion-label class="common_label">{{"xx/xx/2017" | translate}}</ion-label>
+            </ion-col>
+      
+            <ion-col width-25 >
+                <ion-item no-lines class="top-border">
+                    <ion-label class="common_header"><b>{{"deliveredTo" | translate}}</b></ion-label>              
+                  </ion-item>
+                    <ion-label class="common_label">{{"TPS_xxxxxxxxxx" | translate}}</ion-label>
+                    <ion-label class="common_label">{{"Rue_Auguste_perrin_69630_Chaponost" | translate}}</ion-label>
+                    <ion-label class="common_label">{{"TPS_de_xxxxxxxxxx" | translate}}</ion-label>
+            </ion-col>
+      
+            <ion-col width-25 >
+                <ion-item no-lines class="top-border">
+                    <ion-label class="common_header"><b>{{"deliveredBy" | translate}}</b></ion-label>
+                </ion-item>
+                    <ion-label class="common_label">{{"KEVIN_ROUVERENT" | translate}}</ion-label>
+                    <ion-label class="common_label">{{"06_59_89_59_70" | translate}}</ion-label>
+            </ion-col>
+        </ion-row>
+
+        <!-- HOME SCREEN -->
+
+        <!-- <div>
+
+             <ion-row text-center >
+                    <div text-center  style="margin-left:2%;margin-right:2%;">
+                        <ion-label style="color:black;font-weight:bolder;text-align:left;">{{"help_hr1" | translate}}</ion-label>
+                    </div>
+                    <ion-item no-lines style="margin-left:10%;margin: -8px 10px 0px 10px;">
+                        <ion-label style="color:black;text-align:left;font-size:0.6em;margin-left:10%;">{{"help_hr_sub" | translate}}</ion-label>
+                    </ion-item>
+                    <ion-item no-lines style="margin-left:10%;margin: -18px 10px 0px 10px;">
+                        <ion-label style="color:black;text-align:left;font-size:0.6em;margin-left:10%;">{{"help_hr_sub1" | translate}}</ion-label>
+                    </ion-item>
+                    
+            </ion-row>
+            <ion-row colspan="2" class="box-full-border" style="margin-left:5%;margin-right:5%;">
+                <ion-col col-md class="center-line" >
+                    <div class="container"  text-wrap >
+                        <button  class="common-button">
+                            VALORIZATION GOMME
+                        </button>
+                    </div>
+                    <div class="container" text-wrap>
+                        <img src="assets/imgs/rubber.png" style="margin-top: 10%;" width="20%" alt="config-image mb20 configuration diagram">
+                    </div>
+                </ion-col>
+                
+                <ion-col col-md style=" margin-top: 50px;">
+                    <div class="container"  text-wrap>
+                        <button  class="common-button">
+                            VALORIZATION GOMME + GAIN CONSO
+                        </button>
+                    </div>
+                    
+                        <div class="container" text-wrap>
+                        <img src="assets/imgs/fuel_rubber.png" style="margin-top: 10%;" width="40%" alt="config-image mb20 configuration diagram">
+                        </div>
+                </ion-col>
+            </ion-row>  
+        </div> -->
+
+        <!-- OUTIL SCREEN -->
+
+       <!-- <div style="margin-top:20px;margin-bottom:20px;">
+
+            <ion-row text-center >
+                <div text-center  style="margin-left:2%;margin-right:2%;">
+                    <ion-label style="color:black;font-weight:bolder;text-align:left;">{{"help_hr2" | translate}}</ion-label>
+                </div>
+            </ion-row>
+          <div class="box-full-border" style="margin-top:20px;margin-bottom:20px;margin-left:5%;margin-right:5%;">  
+            <ion-row >
+                    <ion-col  width-35 style="background:white;">
+                        <ion-item no-lines class="bottom-border">
+                           <label  style="font-weight: bold;font-size:0.8em;font-family: Arial !important;color: #27509b;">{{"fleet_vehicle_type" | translate}}</label>                        
+                        </ion-item>
+                        <ion-item no-lines class="bottom-border">
+                           <label  style="font-weight: bold;font-size:0.8em;font-family: Arial !important;color: #27509b;"> {{"fleet_spare_wheel" | translate}}</label>
+                        </ion-item>
+                        <ion-item no-lines class="bottom-border">
+                            <label  style="font-weight: bold;font-size:0.8em;font-family: Arial !important;color: #27509b;"> {{"number_of_new_vehicle" | translate}}</label>
+                        </ion-item>
+                        <ion-item no-lines class="bottom-border">
+                            <label  style="font-weight: bold;font-size:0.8em;font-family: Arial !important;color: #27509b;">{{"price_of_michelin_opetion_per_vehicle" | translate}}</label>
+                        </ion-item>
+                        <ion-item no-lines class="bottom-border">
+                            <label  style="font-weight: bold;font-size:0.8em;font-family: Arial !important;color: #27509b;">{{"purchase_price_new_tire" | translate}}</label>
+                        </ion-item>
+                        <ion-item no-lines class="bottom-border">
+                            <label  style="font-weight: bold;font-size:0.8em;font-family: Arial !important;color: #27509b;" >{{"purchase_price_retread_tire" | translate}}</label>
+                        </ion-item>
+                    </ion-col>
+                    
+                    <ion-col  width-35 >
+                        <ion-item no-lines class="bottom-border-yellow stacked-formfield" style="background:rgb(254, 204, 203);">
+                            <!-- <div style="background:rgb(254, 204, 203);"> 
+                                <input disabled (focus)="showAutocompleteModal(0)" [(ngModel)]="autoCompleteData" type="text"  class="big-input" style="color: #333;margin-left:-15px;text-align:right;background:rgb(254, 204, 203);">
+                                <ion-icon name="arrow-down" class="downarrow" style="color:#27509b;background:rgb(254, 204, 203);"></ion-icon>
+                                <!-- </div> -
+                        </ion-item>
+                        <ion-item no-lines class="bottom-border-yellow stacked-formfield" style="background:rgb(254, 204, 203);">
+                            <!-- <div style="background:rgb(254, 204, 203);"> 
+                               <input disabled  (focus)="showAutocompleteModal(1)" [(ngModel)]="whlAutoCompleteData" type="text"  class="big-input" style="color: #333;margin-left:-15px;text-align:right;background:rgb(254, 204, 203);">
+                               <ion-icon name="arrow-down" class="downarrow" style="color:#27509b"></ion-icon>
+                              <!-- </div>   
+                        </ion-item>
+                        <ion-item no-lines class="bottom-border-yellow stacked-formfield" style="background:rgb(254, 204, 203);">
+                            <div  id = "num_newVehicle" style="background:rgb(254, 204, 203);">
+                                <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" [ngModel]="num_newVehicle | number:0" (ngModelChange)="onChange($event, 'num_newVehicle')" pattern="[0-9]*" ng-change="fleetChange()" type="text" class="big-input" style="color: #333;margin-left:-15px;text-align:right;background:rgb(254, 204, 203);"  >
+                                <ion-icon name="arrow-down" class="downarrow" style="color:#27509b"></ion-icon>
+                              </div>  
+                        </ion-item>
+                        <ion-item no-lines class="bottom-border-yellow stacked-formfield" style="background:rgb(254, 204, 203);">
+                            <div  id="optionTirePrice" style="background:rgb(254, 204, 203);">
+                                <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" [ngModel]="optionTirePrice | number:0" (ngModelChange)="onChange($event, 'optionTirePrice')" pattern="[0-9]*" ng-change="fleetChange()" type="text" class="big-input" style="color: #333;margin-left:-15px;text-align:right;background:rgb(254, 204, 203);" >
+                                <!-- <div class="dollarsign" style="font-size: 16px; font-weight: bold; margin-top:-20px; margin-bottom: 1px;text-align:right;">{{currency}}</div> 
+                                <ion-icon name="arrow-down" class="downarrow" style="color:#27509b"></ion-icon>
+                            </div>
+                        </ion-item>
+                        <ion-item no-lines class="bottom-border-yellow stacked-formfield" style="background:rgb(254, 204, 203);">
+                            <div id="newTirePrice" style="background:rgb(254, 204, 203);">
+                                <input disabled   enumber ng-model-options="{ updateOn: 'blur' }" [ngModel] ="new_tire_price | number :0" (ngModelChange)="onChange($event, 'newTirePrice')" pattern="[0-9]*" ng-change="fleetChange()" type="text" class="big-input" style="color: #333;margin-left:-15px;text-align:right;background:rgb(254, 204, 203);" >
+                                <!-- <div class="dollarsign" style="font-size: 16px; font-weight: bold; margin-top:-20px; margin-bottom: 1px;text-align:right;">{{currency}}</div> 
+                                <ion-icon name="arrow-down" class="downarrow" style="color:#27509b"></ion-icon>
+                            </div>
+                        </ion-item>
+                        <ion-item no-lines class="bottom-border-yellow stacked-formfield" style="background:rgb(254, 204, 203);">
+                            <div  id="retreadTirePrice" style="background:rgb(254, 204, 203);">
+                               <input disabled   enumber ng-model-options="{ updateOn: 'blur' }" [ngModel] ="retread_tire_price | number :0" (ngModelChange)="onChange($event, 'retreadTirePrice')" pattern="[0-9]*" ng-change="fleetChange()" type="text" class="big-input" style="color: #333;margin-left:-15px;text-align:right;background:rgb(254, 204, 203);" >
+                               <!-- <div class="dollarsign" style="font-size: 16px; font-weight: bold; margin-top:-20px; margin-bottom: 1px;text-align:right;">{{currency}}</div> 
+                               <ion-icon name="arrow-down" class="downarrow" style="color:#27509b"></ion-icon>
+                            </div>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col  width-30>
+                      <div class="container" text-center>
+                      <img src="assets/imgs/thumbicon.png" style="margin-top: 20%;" width="100%" alt="config-image mb20 configuration diagram">
+                    </div>
+                    </ion-col>
+                  </ion-row>
+    
+                  <hr style="width:80%;margin-top:30px;"><br>
+                  <label  style="font-weight: bold;font-size:1.1em;font-family: Arial !important;font-style:italic;color: #000000;margin-left:2%;margin-right:2%;">{{"sub_title1" | translate}}</label>                        
+                  <p> <br>  </p> 
+                  <ion-grid no-padding > 
+                      <ion-row text-wrap style="margin-left:2%;margin-right:2%;">
+                         <ion-col width-30 col-md class="header-row">
+                              <ion-item no-lines >
+                              </ion-item>
+                          </ion-col>
+                        <ion-col width-30 col-md class="header-row" >
+                          <ion-item no-lines class="header-row-item" >
+                             <ion-label style="font-size:0.9em;"> <b>{{"num_newtire_sub_title" | translate}}</b></ion-label>
+                          </ion-item>
+                          <ion-item no-lines class="header-row-item">
+                          </ion-item>
+                           <ion-item no-lines class="header-row-item">
+                           </ion-item>
+                        </ion-col>
+                        <ion-col width-30 col-md class="header-row" style="background:#FCE500;">
+                          <ion-item no-lines class="header-row-item">
+                              <ion-label style="font-size:0.9em;"><b>{{"earnings" | translate}}</b><br>{{"earnings_sub" | translate}}</ion-label>
+                          </ion-item>
+                          <ion-item no-lines class="header-row-item">
+                          </ion-item>
+                           
+                        </ion-col>
+                        <ion-col width-30 col-md-3  text-wrap class="header-row" style="background:#FCE500;">
+                          <ion-item no-lines class="header-row-item">
+                              <ion-label style="font-size:0.9em;"><b>{{"estimate_gap" | translate}}</b><br></ion-label>   
+                              </ion-item>
+                              <ion-item no-lines class="header-row-item" style="vertical-align:-webkit-baseline-middle;">                                    
+                              <ion-label style="font-size:0.9em;"><b>{{"michelin_title" | translate}}</b>{{"divider" | translate}}<b>{{"competitor_title" | translate}}</b></ion-label>                                    
+                            </ion-item>
+                        </ion-col>
+                        <ion-col width-30 col-md-3  class="header-row" style="background:#FCE500;">
+                            <ion-item no-lines class="header-row-item">
+                                <ion-label text-wrap="" style="font-size:0.9em;"><b>{{"save_tire" | translate}}</b></ion-label>
+                                <ion-label text-wrap="" style="font-size:0.9em;"><b>{{"estimate_price" | translate}}</b></ion-label>
+                                <ion-label text-wrap="" style="font-size:0.9em;"><b>{{"saving_price" | translate}}</b></ion-label>
+                            </ion-item>
+                            <ion-item no-lines class="header-row-item">
+                            </ion-item>
+                             
+                          </ion-col>
+                         
+                      </ion-row>
+              
+                      <ion-row text-wrap style="background-color: white;margin-left:2%;margin-right:2%;">
+                        <ion-col  width-30 col-md class="custom-input-box">
+                          <ion-item no-lines class="custom-input-box">
+                              <ion-label class="common-label"><b>{{"retread_title" | translate}}</b></ion-label>
+                            </ion-item>
+                        </ion-col>
+              
+                        <ion-col  width-30 col-md class="first-row">
+                          <ion-item no-lines class="first-row-item">
+                              <div class="stacked-formfield " id = "retread_num_newVehicle">
+                                  <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" [ngModel]="retread_num_newVehicle | number:0" (ngModelChange)="onChange($event, 'retread_num_newVehicle')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input"  >
+                              </div>
+                            </ion-item>
+                            
+                        </ion-col>
+                        <ion-col  width-30 col-md style="background:#27509b;">
+                            <ion-row text-wrap>
+                                <ion-col width-10 style="background:#27509b;flex: 0 0 30%; max-width: 30%;">
+                                   <ion-label label-md style="color:white;margin: 0px 0px 0px 0; margin-left:1px;">X</ion-label>
+                                </ion-col>
+                                <ion-col width-90 style="background:#27509b;flex: 0 0 40%; max-width: 40%;">
+                                    <div  id = "retread_earings" >
+                                      <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" [ngModel]="retread_earings | number:0" (ngModelChange)="onChange($event, 'retread_earings')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input" style="background:rgb(254, 204, 203);">                                    
+                                    </div>  
+                                </ion-col>
+                                <ion-col width-10 style="background:#27509b;flex: 0 0 30%; max-width: 30%;">
+                                        <ion-label label-md style="color:white;margin: 0px 0px 0px 0; margin-left:1px;">X</ion-label>
+                                 </ion-col>
+                            </ion-row>
+                        </ion-col>
+                        <ion-col  width-30 col-md-3 class="first-row" >
+                           <ion-row style="height:100%;">
+                               <ion-col  style="padding:0px;">
+                                    <ion-row >
+                                      <ion-col class="stacked-formfield " id = "retread_michelin" style="padding:0px;background:rgb(254, 204, 203);">   
+                                         <div  id = "retread_michelin">
+                                           <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" style="margin-top:-5px;" [ngModel]="retread_michelin | number:0" (ngModelChange)="onChange($event, 'retread_michelin')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input" style="background:rgb(254, 204, 203);" >
+                                         </div> 
+                                         </ion-col>
+                                         <ion-col style="padding:0px;background:rgb(254, 204, 203);">
+                                            <!-- <div> 
+                                                <button ion-button icon-left  style="transform: translate3d(-5px, -3px, 0px) scale(1); height: 21px; width: 15px; background:#27509b; ">
+                                                    <ion-icon name="arrow-back"></ion-icon>
+                                                </button>
+                                                <button ion-button icon-right  style="transform: translate3d(30px, -32px, 0px) scale(1); height: 21px; width: 15px;background:#27509b;">
+                                                    <ion-icon name="arrow-forward"></ion-icon>
+                                                </button>
+                                         </ion-col>
+                                </ion-row>
+                               </ion-col>
+                               <ion-col class="normal-col-centerborder" style="padding:0px;">
+                                    <ion-row  >
+                                            <ion-col class="stacked-formfield " id = "retread_competitor" style="padding:0px;background:rgb(254, 204, 203);">   
+                                               <div  id = "retread_competitor">
+                                                    <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" id = "retread_competitor1"  [ngModel]="retread_competitor | number:0" (ngModelChange)="onChange($event, 'retread_competitor')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input" style="background:rgb(254, 204, 203);">
+                                                </div> 
+                                               </ion-col>
+                                               <ion-col style="padding:0px;background:rgb(254, 204, 203);">
+                                                  <!-- <div> 
+                                                      <button ion-button icon-left   style="transform: translate3d(-5px, -3px, 0px) scale(1); height: 21px; width: 15px; background:#27509b; ">
+                                                          <ion-icon name="arrow-back"></ion-icon>
+                                                      </button>
+                                                      <button ion-button icon-right   style="transform: translate3d(30px, -32px, 0px) scale(1); height: 21px; width: 15px;background:#27509b;">
+                                                          <ion-icon name="arrow-forward"></ion-icon>
+                                                      </button>
+                                                  <!-- </div> 
+                                               </ion-col>
+                                      </ion-row>
+                                   
+                               </ion-col>
+                           </ion-row> 
+                        
+                        </ion-col>
+                        <ion-col  width-30 col-md-3 class="first-row">
+                            <ion-row style="height:100%">
+                                <ion-col style="padding:0px;">
+                                    <div class="stacked-formfield " id = "retread_save_tire">
+                                            <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" [ngModel]="retread_save_tire | number:0" (ngModelChange)="onChange($event, 'retread_save_tire')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input"  style="margin-left:10px;">
+                                     </div>
+                                </ion-col>
+                                <ion-col class="normal-col-centerborder" style="padding:0px;">
+                                    <div class="stacked-formfield " id = "retread_est_tire">
+                                            <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" [ngModel]="retread_est_tire | number:0" (ngModelChange)="onChange($event, 'retread_est_tire')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input"  style=" margin-left:10px;">
+                                            <!-- <div class="dollarsign" style="font-size: 16px; font-weight: bold; margin-top:-18px; margin-bottom: 4px;">{{currency}}</div> 
+                                     </div>    
+                                </ion-col>
+                                <ion-col class="normal-col-centerborder" style="padding:0px;">
+                                    <div class="stacked-formfield " id = "retread_save_euros">
+                                            <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" [ngModel]="retread_save_euros | number:0" (ngModelChange)="onChange($event, 'retread_save_euros')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input"  style=" margin-left:10px;">
+                                            <!-- <div class="dollarsign" style="font-size: 16px; font-weight: bold; margin-top:-18px; margin-bottom: 4px;">{{currency}}</div> 
+                                     </div>  
+                                 </ion-col>
+                            </ion-row>
+                           
+                          </ion-col>
+                      </ion-row>
+    
+              <!-- Second Line 
+    
+                      <ion-row  text-wrap  style="background-color: white;margin-left:2%;margin-right:2%;">
+                          <ion-col width-30 col-md class="custom-input-box">
+                            <ion-item no-lines class="first-row-item">
+                                <ion-label class="common-label"><b>{{"regroove_title" | translate}}</b></ion-label>
+                                
+                              </ion-item>
+                          </ion-col>
+                
+                          <ion-col width-30 col-md class="first-row">
+                            <ion-item no-lines class="first-row-item">
+                                <div class="stacked-formfield " id = "regroove_num_newVehicle">
+                                    <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" [ngModel]="regroove_num_newVehicle | number:0" (ngModelChange)="onChange($event, 'regroove_num_newVehicle')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input" >
+                                </div>
+                              </ion-item>
+                        
+                          </ion-col>
+                          <ion-col  width-30 col-md style="background:#27509b;">
+                                <ion-row text-wrap>
+                                    <ion-col width-10 style="background:#27509b;flex: 0 0 30%; max-width: 30%;">
+                                      <ion-label label-md style="color:white;margin: 0px 0px 0px 0; margin-left:1px;">X</ion-label>
+                                    </ion-col>
+                                    <ion-col width-90 style="background:#27509b;flex: 0 0 40%; max-width: 40%;">
+                                        <div id = "regroove_earnings">
+                                          <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" [ngModel]="regroove_earnings | number:0" (ngModelChange)="onChange($event, 'regroove_earnings')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input" style="background:rgb(254, 204, 203);">
+                                        </div> 
+                                    </ion-col>
+                                    <ion-col width-10 style="background:#27509b;flex: 0 0 30%; max-width: 30%;">
+                                            <ion-label label-md style="color:white;margin: 0px 0px 0px 0; margin-left:1px;">X</ion-label>
+                                    </ion-col>
+                                </ion-row>
+                            </ion-col>
+                         
+                          <ion-col width-30 col-md-3 class="first-row">
+                                <ion-row style="height:100%;">
+                                        <ion-col  style="padding:0px;">
+                                             <ion-row >
+                                               <ion-col class="stacked-formfield " style="padding:0px;background:rgb(254, 204, 203);">   
+                                                  <div  id = "regroove_michelin">
+                                                    <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" style="margin-top:-5px;" [ngModel]="regroove_michelin | number:0" (ngModelChange)="onChange($event, 'regroove_michelin')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input" style="background:rgb(254, 204, 203);" >
+                                                  </div> 
+                                                  </ion-col>
+                                                  <ion-col style="padding:0px;background:rgb(254, 204, 203);">
+                                                         <button ion-button icon-left  style="transform: translate3d(-5px, -3px, 0px) scale(1); height: 21px; width: 15px; background:#27509b; ">
+                                                             <ion-icon name="arrow-back"></ion-icon>
+                                                         </button>
+                                                         <button ion-button icon-right  style="transform: translate3d(30px, -32px, 0px) scale(1); height: 21px; width: 15px;background:#27509b;">
+                                                             <ion-icon name="arrow-forward"></ion-icon>
+                                                         </button>
+                                                     
+                                                  </ion-col>
+                                         </ion-row>
+                                        </ion-col>
+                                        <ion-col class="normal-col-centerborder" style="padding:0px;">
+                                             <ion-row  >
+                                                     <ion-col class="stacked-formfield " style="padding:0px;background:rgb(254, 204, 203);">   
+                                                        <div id = "regroove_competitor">
+                                                             <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" id = "regroove_competitor1" [ngModel]="regroove_competitor | number:0" (ngModelChange)="onChange($event, 'regroove_competitor')" pattern="[0-9]*" ng-change="fleetChange()" type="text" style="background:rgb(254, 204, 203);" class="big-input" >
+                                                         </div> 
+                                                        </ion-col>
+                                                        <ion-col style="padding:0px;background:rgb(254, 204, 203);">
+                                                               <button ion-button icon-left   style="transform: translate3d(-5px, -3px, 0px) scale(1); height: 21px; width: 15px; background:#27509b; ">
+                                                                   <ion-icon name="arrow-back"></ion-icon>
+                                                               </button>
+                                                               <button ion-button icon-right   style="transform: translate3d(30px, -32px, 0px) scale(1); height: 21px; width: 15px;background:#27509b;">
+                                                                   <ion-icon name="arrow-forward"></ion-icon>
+                                                               </button>
+                                                        </ion-col>
+                                               </ion-row>
+                                            
+                                        </ion-col>
+                                    </ion-row> 
+                            
+                          </ion-col>
+                          <ion-col width-30 col-md-3 class="first-row">
+                                <ion-row style="height:100%">
+                                        <ion-col style="padding:0px;">
+                                            <div class="stacked-formfield " id = "regroove_save_tire">
+                                                    <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" [ngModel]="regroove_save_tire | number:0" (ngModelChange)="onChange($event, 'regroove_save_tire')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input"  style="margin-left:10px">
+                                            </div>
+                                        </ion-col>
+                                        <ion-col class="normal-col-centerborder" style="padding:0px;">
+                                            <div class="stacked-formfield " id = "regroove_est_tire">
+                                                    <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" [ngModel]="regroove_est_tire | number:0" (ngModelChange)="onChange($event, 'regroove_est_tire')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input"  style="margin-left:10px">
+                                                    <!-- <div class="dollarsign" style="font-size: 16px; font-weight: bold; margin-top:-18px; margin-bottom: 4px;">{{currency}}</div> 
+                                            </div>    
+                                        </ion-col>
+                                        <ion-col class="normal-col-centerborder" style="padding:0px;">
+                                            <div class="stacked-formfield " id = "regroove_save_euros">
+                                                    <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" [ngModel]="regroove_save_euros | number:0" (ngModelChange)="onChange($event, 'regroove_save_euros')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input"  style="margin-left:10px">
+                                                    <!-- <div class="dollarsign" style="font-size: 16px; font-weight: bold; margin-top:-18px; margin-bottom: 4px;">{{currency}}</div> 
+                                            </div>  
+                                         </ion-col>
+                                    </ion-row>
+                            </ion-col>
+                          
+                        </ion-row>
+    
+                <!-- Last Line 
+    
+                        <ion-row text-wrap style="background-color: white;margin-left:2%;margin-right:2%;">
+                            <ion-col width-30 col-md class="custom-input-box1">
+                              <ion-item no-lines class="first-row-item">
+                                  <!-- <ion-label ><b>{{"michelin_title" | translate}}</b></ion-label> <br> 
+                                  <ion-label class="common-label"><b>{{"km_title" | translate}}</b></ion-label>                    
+                                  <!-- <ion-label class="common-label"><b>{{"competitor_title" | translate}}</b></ion-label> <br>                  
+                              </ion-item>
+                            </ion-col>
+                            
+                            <ion-col width-30 col-md class="first-row">
+                              <ion-item no-lines class="first-row-item">
+                                  <div class="stacked-formfield " id = "km_num_newVehicle">
+                                      <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" [ngModel]="km_num_newVehicle | number:0" (ngModelChange)="onChange($event, 'km_num_newVehicle')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input" >
+                                  </div>
+                                </ion-item>
+                          
+                            </ion-col>
+                            <ion-col  width-30 col-md style="background:#27509b;">
+                                    <ion-row text-wrap>
+                                        <ion-col width-10 style="background:#27509b;flex: 0 0 30%; max-width: 30%;">
+                                        </ion-col>
+                                        <ion-col width-90 style="background:#27509b;flex: 0 0 40%; max-width: 40%;">
+                                             <ion-label label-md style="color:white;margin: 0px 0px 0px 0; margin-left:1px;">X</ion-label>
+                                        </ion-col>
+                                        <ion-col width-10 style="background:#27509b;flex: 0 0 30%; max-width: 30%;">
+                                        </ion-col>
+                                    </ion-row>
+                             </ion-col>
+                           
+                            <ion-col width-30 col-md-3 class="first-row">
+    
+                                <ion-row style="height:100%;" >
+                                        <div width="80%" class="stacked-formfield " id = "km_competitor">
+                                            <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" id = "km_competitor1" [ngModel]="km_competitor | number:0" (ngModelChange)="onChange($event, 'km_competitor')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input"  >
+                                        </div> 
+                                        <div width="20%">
+                                            <button ion-button icon-left   style="transform: translate3d(35px, -3px, 0px) scale(1); height: 21px; width: 15px; background:#27509b; ">
+                                                <ion-icon name="arrow-back"></ion-icon>
+                                            </button>
+                                            <button ion-button icon-right   style="transform: translate3d(35px, -3px, 0px) scale(1); height: 21px; width: 15px;background:#27509b;">
+                                                <ion-icon name="arrow-forward"></ion-icon>
+                                            </button>
+                                        </div>
+                                </ion-row>
+                            </ion-col>
+                            <ion-col width-30 col-md-3 class="first-row">
+                                    <ion-row style="height:100%">
+                                            <ion-col style="padding:0px;">
+                                                <div class="stacked-formfield " id = "km_save_tire">
+                                                        <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" [ngModel]="km_save_tire | number:0" (ngModelChange)="onChange($event, 'km_save_tire')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input"  style="margin-left:10px;">
+                                                </div>
+                                            </ion-col>
+                                            <ion-col class="normal-col-centerborder" style="padding:0px;">
+                                                <div class="stacked-formfield " id = "km_est_tire">
+                                                        <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" [ngModel]="km_est_tire | number:0" (ngModelChange)="onChange($event, 'km_est_tire')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input"  style="margin-left:10px;">
+                                                        <!-- <div class="dollarsign" style="font-size: 16px; font-weight: bold; margin-top:-18px; margin-bottom: 4px;">{{currency}}</div> 
+                                                </div>    
+                                            </ion-col>
+                                            <ion-col class="normal-col-centerborder" style="padding:0px;">
+                                                <div class="stacked-formfield " id = "km_save_euros">
+                                                        <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" [ngModel]="km_save_euros | number:0" (ngModelChange)="onChange($event, 'km_save_euros')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input"  style="margin-left:10px;">
+                                                        <!-- <div class="dollarsign" style="font-size: 16px; font-weight: bold; margin-top:-18px; margin-bottom: 4px;">{{currency}}</div> 
+                                                </div>  
+                                             </ion-col>
+                                        </ion-row>
+                              </ion-col>
+                          </ion-row>  
+                  </ion-grid>
+                 
+                  <hr style="width:80%;margin-top:30px;"> <br>
+                 
+                  <label  style="font-weight: bold;font-size:1.1em;font-family: Arial !important;font-style:italic;color: #000000;margin-left:2%;margin-right:2%;">{{"sub_title2" | translate}}</label>                      
+                  <p> <br>  </p> 
+    
+                  <ion-grid no-padding style="margin-bottom:40px;" *ngIf="!isGumme"> 
+                        <ion-row text-wrap style="margin-left:2%;margin-right:2%;">
+                           <ion-col width-30 col-md class="header-row">
+                                <ion-item no-lines >
+                                </ion-item>
+                            </ion-col>
+                          <ion-col width-30 col-md class="header-row" style="background:#27509b;">
+                            <ion-item no-lines  style="background:#27509b;color:white;" >
+                               <ion-label style="font-size:0.9em;"> <b>{{"annul_mileage" | translate}}</b></ion-label>
+                               <ion-label ></ion-label>
+                               
+                            </ion-item>
+                            
+                          </ion-col>
+                          <ion-col width-30 col-md class="header-row" style="background:#27509b;">
+                            <ion-item no-lines style="background:#27509b;color:white;">
+                                <ion-label style="font-size:0.9em;"><b>{{"earnings" | translate}}</b><br>{{"("}}{{"gain_sub_text" | translate}}{{"100km)"}}</ion-label>
+                                <ion-label text-wrap=""></ion-label>
+                            </ion-item>
+                           
+                          </ion-col>
+                          <ion-col width-30 col-md  text-wrap class="header-row" style="background:#27509b;">
+                            <ion-item no-lines style="background:#27509b;color:white;">
+                                <ion-label style="font-size:0.9em;"><b>{{"earnings" | translate}}</b><br>{{"("}}{{"gain_sub_text" | translate}}{{"gain_sub_text1" | translate}}{{")" }}</ion-label>                                    
+                          </ion-item>
+                         
+                          </ion-col>
+                          <ion-col width-30 col-md-3  class="header-row" style="background:#27509b;">
+                              <ion-item no-lines style="background:#27509b;color:white;">
+                                  <ion-label text-wrap="" style="font-size:0.9em;"><b>{{"number_of_vehicle" | translate}}</b></ion-label>
+                                  <ion-label text-wrap="" style="font-size:0.9em;"><b>{{"fuel_price" | translate}}</b></ion-label>
+                                  <ion-label text-wrap="" style="font-size:0.9em;"><b>{{"saving_price" | translate}}</b></ion-label>
+                              </ion-item>
+                             
+                            </ion-col>
+                           
+                        </ion-row>
+                
+                        <ion-row text-wrap style="background-color: white;margin: -24px 0px 0px 0px;margin-left:2%;margin-right:2%;">
+                          <ion-col  width-30 col-md class="custom-input-box1" style=" margin: 25px 2px 5px -2px;">
+                            <ion-item no-lines class="custom-input-box">
+                                <ion-label class="common-label"><b>{{"consumption_title" | translate}}</b></ion-label>
+                              </ion-item>
+                          </ion-col>
+                
+                          <ion-col  width-30 col-md class="first-row" style=" margin: 25px 2px 5px -2px;">
+                            <ion-item no-lines class="first-row-item">
+                                <div class="stacked-formfield " id = "conso_annual_mileageVehicle">
+                                    <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" [ngModel]="conso_annual_mileageVehicle | number:0" (ngModelChange)="onChange($event, 'conso_annual_mileageVehicle')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input" >
+                                </div>
+                              </ion-item>
+                              
+                          </ion-col>
+                          <ion-col  width-30 col-md style="background:white; margin: 25px 2px 5px -2px;" class="first-row">
+                              <ion-row text-wrap>
+                                  <ion-col width-10 style="background:#FCE500;flex: 0 0 30%; max-width: 30%;">
+                                     <ion-label label-md style="color:#27509b;margin-left:1px;">X</ion-label>
+                                  </ion-col>
+                                  <ion-col width-80 style="background:white;flex: 0 0 40%; max-width: 40%;background:rgb(254, 204, 203);">
+                                      <div class="stacked-formfield" id = "conso_earning_Vehicle" style="margin-top:10px;background:rgb(254, 204, 203);">
+                                        <input disabled  text-center  enumber ng-model-options="{ updateOn: 'blur' }" [ngModel]="conso_earning_Vehicle | number:0" (ngModelChange)="onChange($event, 'conso_earning_Vehicle')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input" style="background:rgb(254, 204, 203);">                                    
+                                      </div>  
+                                  </ion-col>
+                                  <ion-col width-10 style="background:#FCE500;flex: 0 0 30%; max-width: 30%;">
+                                          <ion-label label-md style="color:#27509b; margin-left:1px;">X</ion-label>
+                                   </ion-col>
+                              </ion-row>
+                          </ion-col>
+                          <ion-col  width-30 col-md class="first-row" style=" margin: 25px 2px 5px -2px;">
+                            <ion-item no-lines class="first-row-item">
+                                <div class="stacked-formfield" id = "conso_earning_year">
+                                    <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" [ngModel]="conso_earning_year | number:0" (ngModelChange)="onChange($event, 'conso_earning_year')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input" >
+                                </div> 
+                            </ion-item>
+                          </ion-col>
+                          <ion-col  width-30 col-md-3 class="first-row" style=" margin: 25px 2px 5px -2px;">
+                              <ion-row style="height:100%">
+                                  <ion-col style="padding:0px;">
+                                      <div class="stacked-formfield " id = "conso_num_veh" style="margin-top:10px;text-align:center;">
+                                              <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" [ngModel]="conso_num_veh | number:0" (ngModelChange)="onChange($event, 'conso_num_veh')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input" >
+                                      </div>
+                                  </ion-col>
+                                  <ion-col class="normal-col-centerborder"  > 
+                                      <div class="stacked-formfield " id = "conso_fuel_price" style="margin-top:10px;">
+                                              <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" [ngModel]="conso_fuel_price | number:0" (ngModelChange)="onChange($event, 'conso_fuel_price')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input"  style="margin-left:10px;">
+                                              <!-- <div class="dollarsign" style="font-size: 16px; font-weight: bold; margin-top:-18px; margin-bottom: 4px;">{{currency}}</div> 
+                                        </div>    
+                                  </ion-col>
+                                  <ion-col class="normal-col-centerborder" >
+                                      <div class="stacked-formfield " id = "conso_save_euros" style="margin-top:10px;">
+                                              <input disabled  enumber ng-model-options="{ updateOn: 'blur' }" [ngModel]="conso_save_euros | number:0" (ngModelChange)="onChange($event, 'conso_save_euros')" pattern="[0-9]*" ng-change="fleetChange()" type="text"  class="big-input"  style="margin-left:10px;">
+                                              <!-- <div class="dollarsign" style="font-size: 16px; font-weight: bold; margin-top:-18px; margin-bottom: 4px;">{{currency}}</div>
+                                        </div>  
+                                   </ion-col>
+                              </ion-row>
+                             
+                          
+                            </ion-col>
+                        </ion-row>
+                 </ion-grid>
+                  <ion-row style="margin-left:20%;width:70%">
+                    <ion-col width-50 class="custom-input-box2">
+          
+                    <ion-label label-md style="color:#27509b;margin: 5px 8px 5px 0; text-align:center;">{{"saving_new_veh_cost" | translate}}</ion-label>
+                    </ion-col>
+                    <ion-col width-50 class="custom-input-value" id="newVehicle_MichelinCost">
+                        <!-- <ion-label label-md style="color:#27509b;margin: 5px 8px 5px 0; " >{{currency}}{{ newVehicle_MichelinCost | number }}</ion-label> 
+                    </ion-col>
+                  </ion-row>
+                  <ion-row style="margin-left:20%;margin-top:20px;width:70%;margin-bottom:20px;">
+                    <ion-col width-50 class="custom-input-box2">
+          
+                    <ion-label  label-md style="color:#27509b;margin: 5px 8px 5px 0; text-align:center;">{{"total_saving" | translate}}</ion-label>
+                    </ion-col>
+                    <ion-col width-50 class="custom-input-value" id="withoutMichelinCost">
+                        <!-- <ion-label label-md style="color:#27509b;margin: 5px 8px 5px 0;">{{ "currency" | translate }}{{ withoutMichelinCost | number }}</ion-label> 
+                    </ion-col>
+                  </ion-row> 
+            </div>   
+        </div>-->
+
+        <ion-grid >
+            <!-- <ion-row text-center >
+                <div text-center  style="background:#27509b;margin-left:40%;margin-right:40%;">
+                    <ion-label style="background:#27509b;color:white;font-weight:bolder;text-align:center;">{{"help_sub_title" | translate}}</ion-label>
+                </div>
+            </ion-row>
+            <ion-row text-center >
+                    <div text-center  style="margin-left:2%;margin-right:2%;">
+                        <ion-label style="color:black;font-weight:bolder;text-align:center;">{{"help_hr3" | translate}}</ion-label>
+                    </div>
+            </ion-row> -->
+            <ion-row class="formula_row">
+                <ion-col col-3 class="formula_left_col">
+                    <div style="background:#FCE500; line-height:250px; " >
+                        <label class="formula_left_col_label">{{"retread_title" | translate}}</label>
+                    </div>
+                </ion-col>
+                <ion-col class="custom-input-box1" style="width:90%;">
+                    <div >
+                        <ion-label text-wrap class="formula_desc">{{"help_rtd_text1" | translate}}</ion-label><br>
+                    </div>
+                    <div style="margin: -18px 0px 0px 0px;">  
+                        <ion-label text-wrap class="formula_desc">{{"help_rtd_text2" | translate}}</ion-label><br>
+                    </div>
+                    <div style="margin: -18px 0px 0px 0px;">       
+                        <ion-label text-wrap class="formula_desc">{{"help_rtd_text3" | translate}}</ion-label><br>
+                    </div>
+                    <div style="margin: -25px 0px 0px 0px;">    
+                        <ion-label text-wrap class="formula_desc">{{"help_rtd_text4" | translate}}</ion-label><br>
+                    </div>
+                    <hr > <br>
+                    <div style="margin: -34px 0px 0px 0px;">     
+                        <ion-label class="formula_label">{{"calculation" | translate}}</ion-label>
+                    </div>
+
+                    <div style="margin: -1px 0px 0px 0px;">     
+                        <ion-label class="formula_label">{{"saving_price" | translate}}{{currency}}{{"cal_text1" | translate}}{{"cal_text2" | translate}}{{"cal_text3" | translate}}</ion-label>
+                    </div>
+                </ion-col>
+            </ion-row>
+            <ion-row class="formula_row">
+                    <ion-col col-3 class="formula_left_col">
+                        <div style="background:#FCE500; line-height:230px; " >
+                            <label class="formula_left_col_label">{{"regroove_title" | translate}}</label>
+                        </div>
+                    </ion-col>
+                    <ion-col class="custom-input-box1" style="width:90%;">
+                        <div >
+                            <ion-label text-wrap class="formula_desc">{{"help_rgrv_text1" | translate}}{{"help_rgrv_text_sub1" | translate}}</ion-label><br>
+                        </div>
+                        
+                        <div style="margin: -18px 0px 0px 0px;">  
+                            <ion-label class="formula_desc">{{"help_rgrv_text2" | translate}}</ion-label><br>
+                        </div>
+                        <div style="margin: -25px 0px 0px 0px;">       
+                            <ion-label text-wrap  class="formula_desc">{{"help_rgrv_text3" | translate}}</ion-label><br>
+                        </div>
+
+                        <hr > <br>
+                        <div style="margin: -34px 0px 0px 0px;">     
+                            <ion-label class="formula_label">{{"calculation" | translate}}</ion-label>
+                        </div>
+    
+                        <div style="margin: -1px 0px 0px 0px;">     
+                            <ion-label class="formula_label">{{"saving_price" | translate}}{{currency}}{{"cal_text6" | translate}}{{"cal_text2" | translate}}{{"cal_text5" | translate}}{{"cal_text3" | translate}}</ion-label>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="formula_row">
+                    <ion-col col-3 class="formula_left_col">
+                        <div style="background:#FCE500; line-height:230px; " >
+                            <label class="formula_left_col_label">{{"km_title" | translate}}</label>
+                        </div>
+                    </ion-col>
+                    <ion-col class="custom-input-box1" style="width:90%;">
+                        <div >
+                            <ion-label text-wrap class="formula_desc">{{"help_km_text1" | translate}}</ion-label><br>
+                        </div>
+                        <div >  
+                            <ion-label text-wrap class="formula_desc">{{"help_km_text2" | translate}}</ion-label><br>
+                        </div>
+
+                        <hr > <br>
+                        <div style="margin: -34px 0px 0px 0px;">     
+                            <ion-label class="formula_label">{{"calculation" | translate}}</ion-label>
+                        </div>
+    
+                        <div style="margin: -1px 0px 0px 0px;">     
+                                <ion-label class="formula_label">{{"saving_price" | translate}}{{currency}}{{"cal_text6" | translate}}{{"cal_text2" | translate}}{{"cal_text5" | translate}}{{"cal_text3" | translate}}</ion-label>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="formula_row">
+                    <ion-col col-3 class="formula_left_col">
+                        <div style="background:#FCE500; line-height:230px; " >
+                            <label class="formula_left_col_label">{{"help_sub_title1" | translate}}</label>
+                        </div>
+                    </ion-col>
+                    <ion-col class="custom-input-box1" style="width:90%;">
+                        <div >
+                            <ion-label class="formula_desc">{{"help_conso_text1" | translate}}</ion-label><br>
+                        </div>
+                        <div >  
+                            <ion-label text-wrap class="formula_desc">{{"help_conso_text2" | translate}}</ion-label><br>
+                        </div>
+
+                        <hr > <br>
+                        <div style="margin: -34px 0px 0px 0px;">     
+                            <ion-label class="formula_label">{{"calculation" | translate}}</ion-label>
+                        </div>
+    
+                        <div style="margin: -1px 0px 0px 0px;">     
+                                <ion-label class="formula_label">{{"saving_price" | translate}}{{currency}}{{"cal_text7" | translate}}</ion-label>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="formula_row">
+                        <ion-col col-3  style="background:#27509b; width:10%;display:flex; justify-content: center;">
+                            <div style="background:#27509b; line-height:60px; " >
+                                <label style="background:#27509b;color:white;font-weight:bolder;text-align:center;">{{"total" | translate}}</label>
+                            </div>
+                        </ion-col>
+                        <ion-col class="custom-input-box1" style="width:90%;">
+                            <div style="margin: -1px 0px 0px 0px;">     
+                                 <ion-label text-wrap class="formula_label">{{"cal_total" | translate}}{{"cal_total1" | translate}}</ion-label>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+        </ion-grid>
+    </div>
+</ion-content>

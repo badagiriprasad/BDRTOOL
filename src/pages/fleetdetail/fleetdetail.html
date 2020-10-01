@@ -1,0 +1,892 @@
+<ion-header>
+        <ion-navbar color="michelinblue">
+            <button ion-button icon-only menuToggle start>
+                <ion-icon name="menu" ></ion-icon>
+            </button>
+            <ion-label class="header_text">
+                    <div id = "title2retreaddiv"  [ngStyle]="{'height': '20px','over-flow':'scroll !important', 'font-size': fontAdjustmentService.calculateFontSize('title2retreaddiv')}">
+
+                {{"avg_cost_of_tread" | translate}}<span style="color:#FCE500">{{"3retreads" | translate}}</span></div>
+            </ion-label>
+            <ion-buttons end>
+            
+            <button class="topTitleNextButton" (click)="openHomePage();">
+                <label>{{"back" | translate}}</label>
+            </button>
+        </ion-buttons>
+        </ion-navbar>
+    </ion-header>
+
+    <!-- <ion-header>
+
+        <ion-navbar style="padding-top:10px;">
+          <button ion-button icon-only menuToggle start (click)="screenshot();">
+            <ion-icon name="menu"></ion-icon>
+          </button>
+               <ion-buttons end>
+                <button class="topTitleNextButton" (click)="openAlignmentSecondPage();">
+                <label>{{'back' | translate}}</label>
+            </button>
+          </ion-buttons>
+        </ion-navbar>
+      
+      </ion-header> -->
+          
+    <ion-content padding>
+         <div id="retreads3">
+            <ion-row style="background:rgb(235, 235, 235); margin-left:-20px;margin-right:-20px; margin-top:-15px;">
+                <ion-col  width-25 style="margin-left:2%" >
+                    <!-- <ion-item no-lines class="top-border"> -->
+                            <!-- {{"date" | translate}} -->
+                        <ion-label class="common_header" ><b>{{"date" | translate}}</b></ion-label>
+                        <ion-label class="top-border1"></ion-label>
+                    <!-- </ion-item> -->
+                        <!-- <ion-label class="common_label">{{"xx/xx/2017" | translate}}</ion-label> -->
+                        <ion-datetime  class="common_label" style="margin-left:5px;" displayFormat="MM/DD/YYYY" [(ngModel)]="date"></ion-datetime>
+                    </ion-col>
+            
+                    <ion-col width-25 >
+                    <!-- <ion-item no-lines class="top-border"> -->
+                        <ion-label class="common_header"><b>{{"deliveredTo" | translate}}</b></ion-label>  
+                        <ion-label class="top-border1"></ion-label>            
+                        <!-- </ion-item> -->
+                        <!-- <ion-label class="common_label">{{"TPS xxxxxxxxxx" | translate}}</ion-label>
+                        <ion-label class="common_label">{{"Rue Auguste perrin 69630 Chaponost" | translate}}</ion-label>
+                        <ion-label class="common_label">{{"TPS de xxxxxxxxxx" | translate}}</ion-label> -->
+    
+                        <ion-label class="common_label" *ngIf="company != ''"> {{company}} </ion-label>
+                        <ion-label class="common_label" *ngIf="addrees != '' && customerZipCode != ''" >{{addrees}} {{customerZipCode}} </ion-label>
+                        <ion-label class="common_label" *ngIf="customerCity != ''">{{customerCity}} </ion-label>
+                        <ion-label class="common_label" *ngIf="customerName != ''">{{customerName}}</ion-label>
+                        <ion-label class="common_label" *ngIf="customerPhone != ''">{{customerPhone}}</ion-label>
+                    </ion-col>
+            
+                    <ion-col width-25 >
+                    <!-- <ion-item no-lines class="top-border"> -->
+                        <ion-label class="common_header"><b>{{"deliveredBy" | translate}}</b></ion-label>
+                        <ion-label class="top-border2"></ion-label>
+                        <!-- </ion-item> -->
+                        <!-- <ion-label class="common_label">{{"KEVIN ROUVERENT" | translate}}</ion-label>
+                        <ion-label class="common_label">{{"06 59 89 59 79" | translate}}</ion-label> -->
+    
+                        <ion-label class="common_label" *ngIf="userName != ''">{{userName}}</ion-label>
+                   <ion-label class="common_label" *ngIf="userEmail != ''">{{userEmail}}</ion-label>
+                </ion-col>
+            </ion-row>
+            
+    
+            <p> <br>  </p> 
+            <p> <br>  </p> 
+            <ion-grid no-padding >
+                    <ion-row style="margin-left:2%;width:96%;height:80px">
+                            <ion-col width-100 >
+                                <ion-row text-wrap>
+                                        <ion-col>
+                                               
+                                        </ion-col>
+            
+                                        <ion-col >
+                                            <span>
+                                                <img src="assets/imgs/logo1.png"  >
+                                            </span>                    
+                                                                 
+                                        </ion-col>
+                                        
+                                        <ion-col col-md class="custom-col-css14">
+                                            <span>
+                                                <img src="assets/imgs/logo2.png"  *ngIf="logoId_Retread_1 == 2">
+                                                <img src="assets/imgs/logo3.png"  *ngIf="logoId_Retread_1 == 3">
+                                            </span>                                          
+                                         
+                                        </ion-col>
+            
+                                        <ion-col col-md class="custom-col-css13">
+    
+                                            <span>
+                                                    
+                                                    <img src="assets/imgs/logo2.png"  *ngIf="logoId_Retread_2 == 2">
+                                                    <img src="assets/imgs/logo3.png"  *ngIf="logoId_Retread_2 == 3">
+                                            </span> 
+                                                
+                                        </ion-col>
+            
+                                        <ion-col col-md class="custom-col-css13">
+    
+                                            <span>
+                                                   
+                                                    <img src="assets/imgs/logo2.png"   *ngIf="logoId_Retread_3 == 2">
+                                                    <img src="assets/imgs/logo3.png"  *ngIf="logoId_Retread_3 == 3">
+                                            </span> 
+                                                
+                                        </ion-col>
+                            
+            
+                                        <ion-col col-md class="custom-col-css10" style="margin-left: 1%">
+                                              
+                                        </ion-col>
+                    
+                                        <ion-col col-md class="custom-col-css10">
+                                               
+                                        </ion-col>
+                                    
+                                        <ion-col col-md class="custom-col-css10">
+                                              
+                                        </ion-col>
+            
+                                        <ion-col col-md class="custom-col-css10" style="margin-left: 1%">
+                                              
+                                        </ion-col>
+            
+                                </ion-row>
+            
+                            </ion-col>
+                        </ion-row>
+            
+                <ion-row style="margin-left:2%;width:96%">
+                    <ion-col width-100 >
+                        <ion-row text-wrap>
+                                <ion-col>
+                                        
+                                </ion-col>
+    
+                                <ion-col >
+                                                         
+                                </ion-col>
+                                
+                                <ion-col col-md class="custom-col-css12" (click) ="brandViewShow_Retread_1()">
+                                        
+    
+                                    
+    
+                                    <div class="arrow-down">
+    
+                                       
+                                    </div>
+                                    <span> {{"brandchoice" | translate}} </span>
+    
+                                    <!-- <ul class="retread3_dropdown-content" *ngIf ="isBrandView_Retread_1 == 0">
+                                
+                                            <span>
+                                            <a href="#" title="Select this card" (click)="brandViewSelection_Retread_1(1)"><img src="assets/imgs/logo1.png"  width="70%" height="70%" align="center"></a>
+                                            </span>
+                                           
+                                            <span>
+                                            <a href="#" title="Select this card" (click)="brandViewSelection_Retread_1(2)"><img src="assets/imgs/logo2.png"  width="70%" height="70%" align="center"></a>
+                                            </span>
+                                           
+                                            <span>
+                                            <a href="#" title="Select this card" (click)="brandViewSelection_Retread_1(3)"><img src="assets/imgs/logo3.png"  width="70%" height="70%" align="center"></a>
+                                            </span>
+                                    </ul> -->
+    
+                                    <!-- <ul class="retread3_dropdown-content" *ngIf ="isBrandView_Retread_1 == 1">
+                                
+                                            <span>
+                                            <a href="#" title="Select this card" (click)="brandViewSelection_Retread_1(2)"><img src="assets/imgs/logo2.png"  width="80%" height="80%"></a>
+                                            </span>
+                                            
+                                            <span>
+                                            <a href="#" title="Select this card" (click)="brandViewSelection_Retread_1(3)"><img src="assets/imgs/logo3.png"  width="80%" height="80%"></a>
+                                            </span>
+    
+                                            
+                                    </ul> -->
+    
+                                    <ul class="retread3_dropdown-content" *ngIf ="isBrandView_Retread_1 == 2">
+                                
+                                            <span>
+                                            <a href="#" title="Select this card" (click)="brandViewSelection_Retread_1(2)"><img src="assets/imgs/logo2.png"  width="80%" height="80%"></a>
+                                            </span>
+                                                                                    
+                                            <span>
+                                            <a href="#" title="Select this card" (click)="brandViewSelection_Retread_1(3)"><img src="assets/imgs/logo3.png"  width="80%" height="80%"></a>
+                                            </span>
+                                    </ul>
+    
+                                    <ul class="retread3_dropdown-content" *ngIf ="isBrandView_Retread_1 == 3">
+                                
+                                            <span>
+                                            <a href="#" title="Select this card" (click)="brandViewSelection_Retread_1(2)"><img src="assets/imgs/logo2.png"  width="80%" height="80%"></a>
+                                            </span>
+                                            <span>
+                                            <a href="#" title="Select this card" (click)="brandViewSelection_Retread_1(3)"><img src="assets/imgs/logo3.png"  width="80%" height="80%"></a>
+                                            </span>
+                                            
+                                           
+                                    </ul>
+                                          
+                                 
+                                </ion-col>
+    
+                                <ion-col col-md class="custom-col-css11" (click) ="brandViewShow_Retread_2()">
+                                        <div class="arrow-down">
+    
+                                       
+                                            </div>
+                                            <span> {{"brandchoice" | translate}} </span>
+            
+                                            <!-- <ul class="retread3_dropdown-content" *ngIf ="isBrandView_Retread_2 == 0">
+                                        
+                                                    <span>
+                                                    <a href="#" title="Select this card" (click)="brandViewSelection_Retread_2(1)"><img src="assets/imgs/logo1.png"  width="70%" height="70%"></a>
+                                                    </span>
+                                                    <span>
+                                                    <a href="#" title="Select this card" (click)="brandViewSelection_Retread_2(2)"><img src="assets/imgs/logo2.png"  width="70%" height="70%"></a>
+                                                    </span>
+                                                    
+                                                    <span>
+                                                    <a href="#" title="Select this card" (click)="brandViewSelection_Retread_2(3)"><img src="assets/imgs/logo3.png"  width="70%" height="70%"></a>
+                                                    </span>
+                                            </ul>
+            
+                                            <ul class="retread3_dropdown-content" *ngIf ="isBrandView_Retread_2 == 1">
+                                        
+                                                    <span>
+                                                    <a href="#" title="Select this card" (click)="brandViewSelection_Retread_2(2)"><img src="assets/imgs/logo2.png"  width="80%" height="80%"></a>
+                                                    </span>
+                                                    
+                                                    <span>
+                                                    <a href="#" title="Select this card" (click)="brandViewSelection_Retread_2(3)"><img src="assets/imgs/logo3.png"  width="80%" height="80%"></a>
+                                                    </span>
+                                            </ul>
+             -->
+                                            <ul class="retread3_dropdown-content" *ngIf ="isBrandView_Retread_2 == 2">
+                                        
+                                                    <span>
+                                                    <a href="#" title="Select this card" (click)="brandViewSelection_Retread_2(2)"><img src="assets/imgs/logo2.png"  width="80%" height="80%"></a>
+                                                    </span>
+                                                                                            
+                                                    <span>
+                                                    <a href="#" title="Select this card" (click)="brandViewSelection_Retread_2(3)"><img src="assets/imgs/logo3.png"  width="80%" height="80%"></a>
+                                                    </span>
+                                            </ul>
+            
+                                            <ul class="retread3_dropdown-content" *ngIf ="isBrandView_Retread_2 == 3">
+                                        
+                                                    <span>
+                                                    <a href="#" title="Select this card" (click)="brandViewSelection_Retread_2(2)"><img src="assets/imgs/logo2.png"  width="80%" height="80%"></a>
+                                                    </span>
+                                                    <span>
+                                                    <a href="#" title="Select this card" (click)="brandViewSelection_Retread_2(3)"><img src="assets/imgs/logo3.png"  width="80%" height="80%"></a>
+                                                    </span>
+                                                    
+                                                   
+                                            </ul>
+                                            
+                                </ion-col>
+    
+                                <ion-col col-md class="custom-col-css11" (click) ="brandViewShow_Retread_3()">
+                                        <div class="arrow-down">
+    
+                                       
+                                            </div>
+                                            <span> {{"brandchoice" | translate}} </span>
+            
+                                            <!-- <ul class="retread3_dropdown-content" *ngIf ="isBrandView_Retread_3 == 0">
+                                        
+                                                    <span>
+                                                    <a href="#" title="Select this card" (click)="brandViewSelection_Retread_3(1)"><img src="assets/imgs/logo1.png"  width="70%" height="70%"></a>
+                                                    </span>
+                                                    <span>
+                                                    <a href="#" title="Select this card" (click)="brandViewSelection_Retread_3(2)"><img src="assets/imgs/logo2.png"  width="70%" height="70%"></a>
+                                                    </span>
+                                                    
+                                                    <span>
+                                                    <a href="#" title="Select this card" (click)="brandViewSelection_Retread_3(3)"><img src="assets/imgs/logo3.png"  width="70%" height="70%"></a>
+                                                    </span>
+                                            </ul>
+            
+                                            <ul class="retread3_dropdown-content" *ngIf ="isBrandView_Retread_3 == 1">
+                                        
+                                                    <span>
+                                                    <a href="#" title="Select this card" (click)="brandViewSelection_Retread_3(2)"><img src="assets/imgs/logo2.png"  width="80%" height="80%"></a>
+                                                    </span>
+                                                    
+                                                    <span>
+                                                    <a href="#" title="Select this card" (click)="brandViewSelection_Retread_3(3)"><img src="assets/imgs/logo3.png"  width="80%" height="80%"></a>
+                                                    </span>
+                                            </ul> -->
+            
+                                            <ul class="retread3_dropdown-content" *ngIf ="isBrandView_Retread_3 == 2">
+                                        
+                                                    <span>
+                                                    <a href="#" title="Select this card" (click)="brandViewSelection_Retread_3(2)"><img src="assets/imgs/logo2.png"  width="80%" height="80%"></a>
+                                                    </span>
+                                                                                            
+                                                    <span>
+                                                    <a href="#" title="Select this card" (click)="brandViewSelection_Retread_3(3)"><img src="assets/imgs/logo3.png"  width="80%" height="80%"></a>
+                                                    </span>
+                                            </ul>
+            
+                                            <ul class="retread3_dropdown-content" *ngIf ="isBrandView_Retread_3 == 3">
+                                        
+                                                    <span>
+                                                    <a href="#" title="Select this card" (click)="brandViewSelection_Retread_3(2)"><img src="assets/imgs/logo2.png"  width="80%" height="80%"></a>
+                                                    </span>
+                                                    <span>
+                                                    <a href="#" title="Select this card" (click)="brandViewSelection_Retread_3(3)"><img src="assets/imgs/logo3.png"  width="80%" height="80%"></a>
+                                                    </span>
+                                                    
+                                                   
+                                            </ul>
+                                            
+                                </ion-col>
+                    
+    
+                                <ion-col col-md class="custom-col-css10" style="margin-left: 1%">
+                                      
+                                </ion-col>
+            
+                                <ion-col col-md class="custom-col-css10">
+                                       
+                                </ion-col>
+                            
+                                <ion-col col-md class="custom-col-css10">
+                                      
+                                </ion-col>
+    
+                                <ion-col col-md class="custom-col-css10" style="margin-left: 1%">
+                                      
+                                </ion-col>
+    
+                        </ion-row>
+    
+                    </ion-col>
+                </ion-row>
+    
+                <ion-row style="margin-left:2%;width:96%">
+                        <ion-col width-100 >
+                            <ion-row text-wrap>
+                                    <ion-col col-md class="custom-col-css2">
+                                           
+                                    </ion-col>
+        
+                                    <ion-col col-md class="custom-col-css">
+                                            <div id = "price_of_newdiv"  [ngStyle]="{'height': '15px','over-flow':'scroll !important', 'font-size': fontAdjustmentService.calculateFontSize('price_of_newdiv')}">
+                                           {{"price_of_new" | translate}}     </div>            
+                                    </ion-col>
+                                    
+                                    <ion-col col-md class="custom-col-css" *ngIf="logoId_Retread_1 == 2">
+                                            <div id = "first_retread_pricediv"  [ngStyle]="{'height': '15px','over-flow':'scroll !important', 'font-size': fontAdjustmentService.calculateFontSize('first_retread_pricediv')}">
+
+                                        {{"first_retread_price" | translate}}   </div>     
+                                     
+                                    </ion-col>
+
+                                    <ion-col col-md class="custom-col-css16" *ngIf="logoId_Retread_1 == 3">
+                                            <div id = "first_retread_price2div"  [ngStyle]="{'height': '15px','over-flow':'scroll !important', 'font-size': fontAdjustmentService.calculateFontSize('first_retread_price2div')}">
+
+                                        {{"first_retread_price" | translate}}</div>
+                                    </ion-col>
+        
+                                    <ion-col col-md class="custom-col-css" *ngIf="logoId_Retread_2 == 2">
+                                            <div id = "second_retread_pricediv"  [ngStyle]="{'height': '15px','over-flow':'scroll !important', 'font-size': fontAdjustmentService.calculateFontSize('second_retread_pricediv')}">
+
+                                         {{"second_retread_price" | translate}}</div>
+                                    </ion-col>
+
+                                    <ion-col col-md class="custom-col-css16" *ngIf="logoId_Retread_2 == 3">
+                                            <div id = "second_retread_price2div"  [ngStyle]="{'height': '15px','over-flow':'scroll !important', 'font-size': fontAdjustmentService.calculateFontSize('second_retread_price2div')}">
+
+                                        {{"second_retread_price" | translate}}</div>
+                                   </ion-col>
+        
+                                    <ion-col col-md class="custom-col-css" *ngIf="logoId_Retread_3 == 2">
+                                            <div id = "third_retread_pricediv"  [ngStyle]="{'height': '15px','over-flow':'scroll !important', 'font-size': fontAdjustmentService.calculateFontSize('third_retread_pricediv')}">
+
+                                        {{"third_retread_price" | translate}}</div>
+                                    </ion-col>
+
+                                    <ion-col col-md class="custom-col-css16" *ngIf="logoId_Retread_3 == 3">
+                                            <div id = "third_retread_price2div"  [ngStyle]="{'height': '10px','over-flow':'scroll !important', 'font-size': fontAdjustmentService.calculateFontSize('third_retread_price2div')}">
+
+                                        {{"third_retread_price" | translate}}</div>
+                                    </ion-col>
+                           
+        
+                                    <ion-col col-md class="custom-col-css3" style="margin-left: 1%" *ngIf="logoId_Retread_1 == 2">
+                                            <div id = "first_retread_acceptancediv"  [ngStyle]="{'height': '15px','over-flow':'scroll !important', 'font-size': fontAdjustmentService.calculateFontSize('first_retread_acceptancediv')}">
+
+                                        {{"first_retread_acceptance" | translate}}</div>
+                                    </ion-col>
+
+                                    <ion-col col-md class="custom-col-css16" style="margin-left: 1%" *ngIf="logoId_Retread_1 == 3">
+                                            <div id = "first_retread_acceptance2div"  [ngStyle]="{'height': '10px','over-flow':'scroll !important', 'font-size': fontAdjustmentService.calculateFontSize('first_retread_acceptance2div')}">
+
+                                        {{"first_retread_acceptance" | translate}}</div>
+                                    </ion-col>
+                
+                                    <ion-col col-md class="custom-col-css" *ngIf="logoId_Retread_2 == 2">
+                                            <div id = "second_retread_acceptancediv"  [ngStyle]="{'height': '15px','over-flow':'scroll !important', 'font-size': fontAdjustmentService.calculateFontSize('second_retread_acceptancediv')}">
+
+                                            {{"second_retread_acceptance" | translate}}</div>
+                                    </ion-col>
+
+                                    <ion-col col-md class="custom-col-css16" *ngIf="logoId_Retread_2 == 3">
+                                            <div id = "second_retread_acceptance2div"  [ngStyle]="{'height': '10px','over-flow':'scroll !important', 'font-size': fontAdjustmentService.calculateFontSize('second_retread_acceptance2div')}">
+
+                                        {{"second_retread_acceptance" | translate}}</div>
+                                    </ion-col>
+                                
+                                    <ion-col col-md class="custom-col-css" *ngIf="logoId_Retread_3 == 2">
+                                            <div id = "third_retread_acceptancediv"  [ngStyle]="{'height': '15px','over-flow':'scroll !important', 'font-size': fontAdjustmentService.calculateFontSize('third_retread_acceptancediv')}">
+
+                                           {{"third_retread_acceptance" | translate}}</div>
+                                    </ion-col>
+
+                                    <ion-col col-md class="custom-col-css16" *ngIf="logoId_Retread_3 == 3">
+                                            <div id = "third_retread_acceptance2div"  [ngStyle]="{'height': '10px','over-flow':'scroll !important', 'font-size': fontAdjustmentService.calculateFontSize('third_retread_acceptance2div')}">
+
+                                        {{"third_retread_acceptance" | translate}}</div>
+                                     </ion-col>
+        
+                                    <ion-col col-md class="custom-col-css1" style="margin-left: 1%">
+                                            <div id = "avg_cost_of_treaddiv"  [ngStyle]="{'height': '15px','over-flow':'scroll !important', 'font-size': fontAdjustmentService.calculateFontSize('avg_cost_of_treaddiv')}">
+
+                                           {{"avg_cost_of_tread" | translate}}</div>
+                                    </ion-col>
+        
+                            </ion-row>
+        
+                        </ion-col>
+                    </ion-row>
+    
+                <ion-row style="margin-left:2%;width:96%">
+                    <ion-col width-100 >
+                        <ion-row text-wrap>
+                                <ion-col col-md class="custom-col-css4">
+                                        {{"michelin" | translate}}
+                                    
+                                </ion-col>
+    
+                                <ion-col col-md class="custom-col-css4">
+                                    <div style="margin-top:5px">
+                                        <input enumber ng-model-options="{ updateOn: 'blur' }" (blur)="captureScreen()" (focus)="focusValue('mich_price_of_new')" (keypress)="restrictNumeric($event)" (ngModelChange)="calculate_mich_avg_cost(1,$event,false,'mich_price_of_new')"  type="text" [ngModel]="mich_price_of_new | number:0" class="big-input" placeholder="0" style="text-align:right;width:50%;border:0;font-size:1.0em;font-family:Arial;color:#333;font-weight: normal;">
+
+                                        <!-- <input type="text" [ngModel]="mich_price_of_new | number:0"  style="margin-top:10px;text-align:right;width:35%;margin-left:17%"> -->
+
+                                        <!-- <ion-input  class="big-input" style="margin-top:10px;text-align:right;width:35%;margin-left:17%"  [ngModel]="mich_price_of_new | number:0">
+
+                                        </ion-input> -->
+                                        <span  style="margin-top:10px;font-size:1.0em;font-family:Arial;color:#333;">{{currency}}</span>
+                                    </div>
+    
+                                    
+                                       
+                                </ion-col>
+                                
+                                <ion-col col-md class="custom-col-css4">
+                                 
+                                    <div style="margin-top:5px">
+                                        <input enumber ng-model-options="{ updateOn: 'blur' }" (blur)="captureScreen()" (focus)="focusValue('mich_price_1st_retread')" (keypress)="restrictNumeric($event)" (ngModelChange)="calculate_mich_avg_cost(2,$event,false,'mich_price_1st_retread')" type="text"  [ngModel]="mich_price_1st_retread | number:0" class="big-input" placeholder="0" style="text-align:right;width:50%;border:0;font-size:1.0em;font-family:Arial;color:#333;font-weight: normal;">
+                                        <span  style="margin-top:10px;font-size:1.0em;font-family:Arial;color:#333;">{{currency}}</span>
+                                    </div>
+                                   
+                                 
+                                </ion-col>
+    
+                                <ion-col col-md class="custom-col-css4">
+                                    <div style="margin-top:5px">
+                                            <input  ng-model-options="{ updateOn: 'blur' }" (blur)="captureScreen()" (focus)="focusValue('mich_price_2nd_retread')" (keypress)="restrictNumeric($event)"  (ngModelChange)="calculate_mich_avg_cost(3,$event,false,'mich_price_2nd_retread')" type="text" [ngModel]="mich_price_2nd_retread | number:0" class="big-input" placeholder="0" style="text-align:right;width:50%;border:0;font-size:1.0em;font-family:Arial;color:#333;font-weight: normal;">
+                                            <span  style="margin-top:10px;font-size:1.0em;font-family:Arial;color:#333;">{{currency}}</span>
+                                    </div> 
+    
+                                </ion-col>
+    
+                                <ion-col col-md class="custom-col-css4">
+                                    <div style="margin-top:5px">
+                                            <input  ng-model-options="{ updateOn: 'blur' }" (blur)="captureScreen()" (focus)="focusValue('mich_price_3rd_retread')" (keypress)="restrictNumeric($event)"  (ngModelChange)="calculate_mich_avg_cost(4,$event,false,'mich_price_3rd_retread')" type="text"  [ngModel]="mich_price_3rd_retread | number:0" class="big-input" placeholder="0" style="text-align:right;width:50%;border:0;font-size:1.0em;font-family:Arial;color:#333;font-weight: normal;">
+                                            <span  style="margin-top:10px;font-size:1.0em;font-family:Arial;color:#333;">{{currency}}</span>
+                                    </div> 
+                                </ion-col>
+                        
+    
+                                <ion-col col-md class="custom-col-css6" style="margin-left: 1%">
+                                    <div style="margin-top:5px">
+                                            <input  ng-model-options="{ updateOn: 'blur' }" (blur)="captureScreen()" (focus)="focusValue('mich_1st_retread_acceptance')" (keypress)="restrictNumeric($event)" (change)="calculate_mich_avg_cost(0,$event,true,'mich_1st_retread_acceptance')"  type="number" [(ngModel)]="mich_1st_retread_acceptance" class="big-input" placeholder="0" style="text-align:right;width:50%;border:0;font-size:1.0em;font-family:Arial;color:#333;font-weight: normal;">
+                                            <span  style="margin-top:10px;font-size:1.0em;font-family:Arial;color:#333;">{{"%"}}</span>
+                                    </div>
+                                       
+                                </ion-col>
+            
+                                <ion-col col-md class="custom-col-css4">
+                                    <div style="margin-top:5px">
+                                            <input  ng-model-options="{ updateOn: 'blur' }" (blur)="captureScreen()" (focus)="focusValue('mich_2nd_retread_acceptance')" (keypress)="restrictNumeric($event)" (change)="calculate_mich_avg_cost(0,$event,true,'mich_2nd_retread_acceptance')" type="number" [(ngModel)]="mich_2nd_retread_acceptance"  class="big-input" placeholder="0" style="text-align:right;width:50%;border:0;font-size:1.0em;font-family:Arial;color:#333;font-weight: normal;">
+                                            <span  style="margin-top:10px;font-size:1.0em;font-family:Arial;color:#333;">{{"%"}}</span>
+                                    </div>
+                                        
+                                </ion-col>
+                            
+                                <ion-col col-md class="custom-col-css4">
+                                    <div style="margin-top:5px">
+                                            <input  ng-model-options="{ updateOn: 'blur' }" (blur)="captureScreen()" (focus)="focusValue('mich_3rd_retread_acceptance')" (keypress)="restrictNumeric($event)" (change)="calculate_mich_avg_cost(0,$event,true,'mich_3rd_retread_acceptance')" type="number"  [(ngModel)]="mich_3rd_retread_acceptance" class="big-input" placeholder="0" style="text-align:right;width:50%;border:0;font-size:1.0em;font-family:Arial;color:#333;font-weight: normal;">
+                                            <span  style="margin-top:10px;font-size:1.0em;font-family:Arial;color:#333;">{{"%"}}</span>
+                                    </div>
+                                      
+                                </ion-col>
+    
+                                <ion-col col-md class="custom-col-css5" style="margin-left: 1%">
+    
+                                    <div style="margin-top:5px">
+                                                <input disabled ng-model-options="{ updateOn: 'blur' }"   type="number"  [ngModel]="mich_avg_cost | number: '1.0-0'" class="big-input" placeholder="0" style="text-align:right;width:50%;border:0;font-size:1.0em;font-family:Arial;color:#333;font-weight: bold;background: white">
+                                                <span  style="margin-top:10px;font-size:1.0em;font-family:Arial;color:#333;">{{currency}}</span>
+                                        </div>
+    
+                                        
+                                       
+                                </ion-col>
+    
+                        </ion-row>
+    
+                    </ion-col>
+                </ion-row>
+    
+                <ion-row style="margin-left:2%;width:96%">
+                        <ion-col width-100 >
+                            <ion-row text-wrap>
+                                    <ion-col col-md class="custom-col-css7">
+                                            {{"competitor" | translate}}
+                                        
+                                    </ion-col>
+        
+                                    <ion-col col-md class="custom-col-css4">
+                                        <div style="margin-top:5px">
+                                            <input  ng-model-options="{ updateOn: 'blur' }" (blur)="captureScreen()" (focus)="focusValue('comp_price_of_new')" (keypress)="restrictNumeric($event)"  (ngModelChange)="calculate_comp_avg_cost(1,$event,false,'comp_price_of_new')"  type="text" [ngModel]="comp_price_of_new | number:0"  class="big-input" placeholder="0" style="text-align:right;width:50%;border:0;font-size:1.0em;font-family:Arial;color:#333;font-weight: normal;">
+                                            <span  style="margin-top:10px;font-size:1.0em;font-family:Arial;color:#333;">{{currency}}</span>
+                                           
+                                        </div>
+                                           
+                                    </ion-col>
+                                    
+                                    <ion-col col-md class="custom-col-css4">
+                                     
+                                        <div style="margin-top:5px">
+                                            <input  ng-model-options="{ updateOn: 'blur' }" (blur)="captureScreen()" (focus)="focusValue('comp_price_1st_retread')" (keypress)="restrictNumeric($event)"  (ngModelChange)="calculate_comp_avg_cost(2,$event,false,'comp_price_1st_retread')"  type="text" [ngModel]="comp_price_1st_retread | number:0"  class="big-input" placeholder="0" style="text-align:right;width:50%;border:0;font-size:1.0em;font-family:Arial;color:#333;font-weight: normal;">
+                                            <span  style="margin-top:10px;font-size:1.0em;font-family:Arial;color:#333;">{{currency}}</span>
+                                        </div>                   
+                                     
+                                    </ion-col>
+        
+                                    <ion-col col-md class="custom-col-css4">
+    
+                                        <div style="margin-top:5px">
+                                            <input  ng-model-options="{ updateOn: 'blur' }" (blur)="captureScreen()" (focus)="focusValue('comp_price_2nd_retread')" (keypress)="restrictNumeric($event)"  (ngModelChange)="calculate_comp_avg_cost(3,$event,false,'comp_price_2nd_retread')"  type="text" [ngModel]="comp_price_2nd_retread | number:0"  class="big-input" placeholder="0" style="text-align:right;width:50%;border:0;font-size:1.0em;font-family:Arial;color:#333;font-weight: normal;">
+                                            <span  style="margin-top:10px;font-size:1.0em;font-family:Arial;color:#333;">{{currency}}</span>
+                                        </div>
+                                         
+                                    </ion-col>
+        
+                                    <ion-col col-md class="custom-col-css4">
+    
+                                        <div style="margin-top:5px">
+                                                <input  ng-model-options="{ updateOn: 'blur' }" (blur)="captureScreen()" (focus)="focusValue('comp_price_3rd_retread')" (keypress)="restrictNumeric($event)"  (ngModelChange)="calculate_comp_avg_cost(4,$event,false,'comp_price_3rd_retread')"  type="text" [ngModel]="comp_price_3rd_retread | number:0"  class="big-input" placeholder="0" style="text-align:right;width:50%;border:0;font-size:1.0em;font-family:Arial;color:#333;font-weight: normal;">
+                                                <span  style="margin-top:10px;font-size:1.0em;font-family:Arial;color:#333;">{{currency}}</span>
+                                        </div>
+                                        
+                                    </ion-col>
+                           
+        
+                                    <ion-col col-md class="custom-col-css6" style="margin-left: 1%">
+    
+                                        <div style="margin-top:5px">
+                                                <input  ng-model-options="{ updateOn: 'blur' }" (blur)="captureScreen()" (focus)="focusValue('comp_1st_retread_acceptance')" (keypress)="restrictNumeric($event)"  (change)="calculate_comp_avg_cost(0,$event,true,'comp_1st_retread_acceptance')"  type="number" [(ngModel)]="comp_1st_retread_acceptance"  class="big-input" placeholder="0" style="text-align:right;width:50%;border:0;font-size:1.0em;font-family:Arial;color:#333;font-weight: normal;">
+                                                <span  style="margin-top:10px;font-size:1.0em;font-family:Arial;color:#333;">{{"%"}}</span>
+                                        </div>
+                                           
+                                    </ion-col>
+                
+                                    <ion-col col-md class="custom-col-css4">
+                                            
+                                        <div style="margin-top:5px">
+                                                <input  ng-model-options="{ updateOn: 'blur' }" (blur)="captureScreen()" (focus)="focusValue('comp_2nd_retread_acceptance')" (keypress)="restrictNumeric($event)"  (change)="calculate_comp_avg_cost(0,$event,true,'comp_2nd_retread_acceptance')"  type="number" [(ngModel)]="comp_2nd_retread_acceptance"  class="big-input" placeholder="0" style="text-align:right;width:50%;border:0;font-size:1.0em;font-family:Arial;color:#333;font-weight: normal;">
+                                                <span  style="margin-top:10px;font-size:1.0em;font-family:Arial;color:#333;">{{"%"}}</span>
+                                        </div>
+                                    </ion-col>
+                                
+                                    <ion-col col-md class="custom-col-css4">
+                                        <div style="margin-top:5px">
+                                                <input  ng-model-options="{ updateOn: 'blur' }" (blur)="captureScreen()" (focus)="focusValue('comp_3rd_retread_acceptance')"  (keypress)="restrictNumeric($event)" (change)="calculate_comp_avg_cost(0,$event,true,'comp_3rd_retread_acceptance')"  type="number" [(ngModel)]="comp_3rd_retread_acceptance"  class="big-input" placeholder="0" style="text-align:right;width:50%;border:0;font-size:1.0em;font-family:Arial;color:#333;font-weight: normal;">
+                                                <span  style="margin-top:10px;font-size:1.0em;font-family:Arial;color:#333;">{{"%"}}</span>
+                                        </div>
+                                          
+                                    </ion-col>
+        
+                                    <ion-col col-md class="custom-col-css9" style="margin-left: 1%" >
+    
+                                        <div style="margin-top:5px">
+                                                    <input disabled ng-model-options="{ updateOn: 'blur' }"  (change)="calculate_mich_avg_cost(2)" type="text"  [ngModel]="comp_avg_cost | number: '1.0-0'" class="big-input" placeholder="0" style="text-align:right;width:50%;border:0;font-size:1.0em;font-family:Arial;color:#333;font-weight: bold;background: white">
+                                                    <span  style="margin-top:10px;font-size:1.0em;font-family:Arial;color:#333;">{{currency}}</span>
+                                            </div>
+    
+                                        
+                                           
+                                    </ion-col>
+        
+                            </ion-row>
+        
+                        </ion-col>
+                    </ion-row>
+    
+                    
+    
+                    <ion-row style="margin-left:2%;width:96%">
+                            <ion-col width-100 >
+                                <ion-row text-wrap>
+                                        <ion-col col-md class="custom-col-css8">
+                                                {{"pricegap" | translate}}
+                                            
+                                        </ion-col>
+            
+                                        <ion-col col-md class="custom-col-css8">
+    
+                                            <div style="margin-top:5px">
+                                                    <input disabled ng-model-options="{ updateOn: 'blur' }"    type="text" [ngModel]="pricegap_price_of_new | number:0"  class="big-input" placeholder="0" style="text-align:right;width:46%;border:0;font-size:1.0em;font-family:Arial;color:#333;font-weight: bold;background: #ECECEC">
+                                                    <span  style="margin-top:10px;font-size:1.0em;font-family:Arial;color:#333;">{{currency}} ({{ pricegap_price_of_new_percentage | number: '1.0-1' }}%)</span>
+                                            </div>
+                                           
+                                        </ion-col>
+                                        
+                                        <ion-col col-md class="custom-col-css8">
+                                            <div style="margin-top:5px">
+                                                        <input disabled ng-model-options="{ updateOn: 'blur' }"    type="text" [ngModel]="pricegap_price1st_retread | number:0"  class="big-input" placeholder="0" style="text-align:right;width:44%;border:0;font-size:1.0em;font-family:Arial;color:#333;font-weight: bold;background: #ECECEC">
+                                                        <span  style="margin-top:10px;font-size:1.0em;font-family:Arial;color:#333;">{{currency}} </span>
+                                                </div>
+    
+                                                           
+                                         
+                                        </ion-col>
+            
+                                        <ion-col col-md class="custom-col-css8">
+    
+                                            <div style="margin-top:5px">
+                                                        <input disabled ng-model-options="{ updateOn: 'blur' }"    type="text" [ngModel]="pricegap_price2nd_retread | number:0"  class="big-input" placeholder="0" style="text-align:right;width:42%;border:0;font-size:1.0em;font-family:Arial;color:#333;font-weight: bold;background: #ECECEC">
+                                                        <span  style="margin-top:10px;font-size:1.0em;font-family:Arial;color:#333;">{{currency}}</span>
+                                                </div>
+                                           
+                                             
+                                        </ion-col>
+            
+                                        <ion-col col-md class="custom-col-css8">
+    
+                                            <div style="margin-top:5px">
+                                                        <input disabled ng-model-options="{ updateOn: 'blur' }"    type="text" [ngModel]="pricegap_price3rd_retread | number:0"  class="big-input" placeholder="0" style="text-align:right;width:40%;border:0;font-size:1.0em;font-family:Arial;color:#333;font-weight: bold;background: #ECECEC">
+                                                        <span  style="margin-top:10px;font-size:1.0em;font-family:Arial;color:#333;">{{currency}}</span>
+                                                </div>
+    
+                                           
+                                            
+                                        </ion-col>
+                               
+            
+                                        <ion-col col-md class="custom-col-css8">
+                                               
+                                        </ion-col>
+                    
+                                        <ion-col col-md class="custom-col-css8">
+                                                
+                                        </ion-col>
+                                    
+                                        <ion-col col-md class="custom-col-css8">
+                                              
+                                        </ion-col>
+            
+                                        <ion-col col-md class="custom-col-css8">
+    
+                                            <div style="margin-top:5px">
+                                                        <input disabled ng-model-options="{ updateOn: 'blur' }"    type="text" [ngModel]="pricegap_avg_cost | number: '1.0-0'"  class="big-input" placeholder="0" style="text-align:right;width:51%;border:0;font-size:1.0em;font-family:Arial;color:#333;font-weight: bold;background: #ECECEC">
+                                                        <span  style="margin-top:10px;font-size:1.0em;font-family:Arial;color:#333;">{{currency}} ({{ pricegap_avg_cost_percentage | number: '1.0-1' }}%)</span>
+                                                </div>
+    
+                                              
+                                               
+                                        </ion-col>
+            
+                                </ion-row>
+            
+                            </ion-col>
+                        </ion-row>
+
+
+
+                
+            </ion-grid> 
+
+            <!-- <ion-grid>
+
+                    <ion-row style="margin-left:2%;width:96%">
+                            <ion-col width-100 >
+                                <ion-row text-wrap>
+                                        <ion-col col-md class="custom-col-css2">
+                                           
+                                            </ion-col>
+                
+                                            <ion-col col-md class="custom-col-css">
+                                                   {{"price_of_new" | translate}}                   
+                                            </ion-col>
+                                            
+                                            <ion-col col-md class="custom-col-css">
+                                             
+                                                {{"first_retread_price" | translate}}                    
+                                             
+                                            </ion-col>
+                
+                                            <ion-col col-md class="custom-col-css">
+                                                 {{"second_retread_price" | translate}}
+                                            </ion-col>
+                
+                                            <ion-col col-md class="custom-col-css">
+                                                {{"third_retread_price" | translate}}
+                                            </ion-col>
+                                   
+                
+                                            <ion-col col-md class="custom-col-css3" style="margin-left: 1%">
+                                                   {{"first_retread_acceptance" | translate}}
+                                            </ion-col>
+                        
+                                            <ion-col col-md class="custom-col-css">
+                                                    {{"second_retread_acceptance" | translate}}
+                                            </ion-col>
+                                        
+                                            <ion-col col-md class="custom-col-css">
+                                                   {{"third_retread_acceptance" | translate}}
+                                            </ion-col>
+                
+                                            <ion-col col-md class="custom-col-css1" style="margin-left: 1%">
+                                                   {{"Average_cost_of_tread" | translate}}
+                                            </ion-col>
+                
+
+                                </ion-row>
+                            </ion-col>
+
+                            <ion-col width-100 >
+                                    <ion-row text-wrap>
+                                            <ion-col col-md class="custom-col-css2">
+                                               
+                                                </ion-col>
+                    
+                                                <ion-col col-md class="custom-col-css">
+                                                       {{"price_of_new" | translate}}                   
+                                                </ion-col>
+                                                
+                                                <ion-col col-md class="custom-col-css">
+                                                 
+                                                    {{"first_retread_price" | translate}}                    
+                                                 
+                                                </ion-col>
+                    
+                                                <ion-col col-md class="custom-col-css">
+                                                     {{"second_retread_price" | translate}}
+                                                </ion-col>
+                    
+                                                <ion-col col-md class="custom-col-css">
+                                                    {{"third_retread_price" | translate}}
+                                                </ion-col>
+                                       
+                    
+                                                <ion-col col-md class="custom-col-css3" style="margin-left: 1%">
+                                                       {{"first_retread_acceptance" | translate}}
+                                                </ion-col>
+                            
+                                                <ion-col col-md class="custom-col-css">
+                                                        {{"second_retread_acceptance" | translate}}
+                                                </ion-col>
+                                            
+                                                <ion-col col-md class="custom-col-css">
+                                                       {{"third_retread_acceptance" | translate}}
+                                                </ion-col>
+                    
+                                                <ion-col col-md class="custom-col-css1" style="margin-left: 1%">
+                                                       {{"Average_cost_of_tread" | translate}}
+                                                </ion-col>
+                    
+    
+                                    </ion-row>
+                                </ion-col>
+
+                    </ion-row>
+
+            </ion-grid>
+     -->
+            
+                  
+                 
+           
+            
+            <p> <br>  </p> 
+    
+            
+            <ion-row style="margin-left:2%;width:96%;height:140px;margin-top:6%" >
+                <ion-col col-width-50  class="custom-input-value">
+    
+                    <div style="margin-top:7%">
+                        <span style="color:black;font-size:1.2em;font-weight:bold;margin-top:5%">
+                            <!-- {{"price_gap" | translate}} -->
+                        </span>
+                       
+                        
+                    </div>
+                      
+    
+                     <span style="color:black;font-size:1.2em;margin-top:5%">
+                        {{"perceived_gap" | translate}}
+                        
+                    </span>
+                    <br>
+                    <span style="color:#27509b;font-size:2em;font-weight:bold;margin-top:5%">
+                            {{pricegap | number: '1.0-0' }} {{currency}}
+                        </span>
+
+                        <!-- <p style="font-size:30px;margin-top:-10%;margin-left:98%;overflow:visible" >&rarr;</p>
+
+                        <p class="one-long-line">
+                            When text must stay on one line, but there is not enough room for it all, this article provides a solution.
+                            </p> -->
+                       
+                </ion-col>
+    
+                <ion-col col-width-50  class="custom-input-value1">
+    
+                    <div style="margin-top:7%">
+                            <span style="color:black;font-size:1.2em;">
+                                {{"real_gap" | translate}}
+                            </span>
+                            <br>
+                            <span style="color:#27509b;font-size:2em;font-weight:bold;margin-top:5%">
+                                {{pricegap_avg_cost  | number: '1.0-0' }} {{currency}}
+                            </span>
+                    </div>
+                    
+                    <!-- <p style="font-size:30px;margin-top:-10%;margin-left:-98%" >&rarr;</p> -->
+                </ion-col>
+
+               
+            </ion-row>
+           
+            
+    
+            <ion-row >
+                <ion-col width-80>
+                    <ion-label label-md style="color:black;font-size:0.7em;" >{{"footer_text" | translate}}</ion-label><br>
+                    
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+    
+                </ion-col>
+                <ion-col width-20>
+                    <ion-row>
+                      <ion-col></ion-col>
+                      <ion-col></ion-col>
+                      <ion-col style="margin-right:-8%;;margin-top:-11%">
+                          <img src="assets/imgs/mich_logo.png"  width="80%" height="80%" >
+                        </ion-col>
+                    </ion-row>
+                </ion-col>
+            </ion-row> 
+        </div>
+    
+             
+    </ion-content>
+          

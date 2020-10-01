@@ -1,0 +1,294 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+input {
+    font-family: Arial !important;
+    color: #27509b ;
+    font-size: 1.1em;
+  }
+  .picker-md .picker-col{
+    padding-right: 40px !important;
+    padding-left: 47px !important;
+  }
+  
+  input.ng-untouched.ng-pristine.ng-invalid{
+    width: 100%;
+  }
+  
+  input.ng-pristine.ng-invalid.ng-touched{
+    width: 100%;
+  }
+  
+  input.ng-untouched.ng-pristine.ng-valid{
+    width: 100%;
+  }
+
+  .topTitleNextButton{
+    background-color: transparent;
+    font-size: 1.5em;
+    color: white;
+    font-weight: 500;
+  }
+  
+  
+  .header_text{
+    vertical-align: middle;
+    text-align: center;
+    color: #ffffff ;
+    // font-family: Arial;
+    font-family: "michelin-regular-webfont";
+    font-size: 20px !important;
+    font-weight: bold !important;
+    font-size: 1.4em !important;
+    
+  }
+  
+  .header_text1{
+    vertical-align: middle;
+    text-align: left;
+    color: #ffffff ;
+    font-family: Arial;
+    font-size: 1.4em !important;
+  }
+  
+  
+  .header_text2{
+    vertical-align: middle;
+    text-align: center;
+    color: black ;
+    font-family: Arial;
+    font-size: 1.4em !important;
+  }
+  .header_text3{
+    vertical-align: middle;
+    text-align: left;
+    color: #ffffff ;
+    font-family: "michelin-regular-webfont";
+    font-size: 1.5em !important;
+    font-weight: bold !important;
+  }
+  .yellow-line{
+    height:1px;
+    border-top:2px solid #FCE500;
+    color: #FCE500;
+    width:100%;
+    margin-left:-273px;
+    background: white;
+  }
+  .common_header{
+    margin-bottom: -2.5%;
+    vertical-align: left;
+    margin-left:-20%;
+    text-align: left;
+    color: #27509b;
+    font-family: Arial;
+    font-size: 0.9em !important;
+    background: transparent;
+  }
+  .common_label{
+    margin-top: -2%;
+    vertical-align: middle;
+    text-align: left;
+    color: black ;
+    font-family: Arial;
+    font-size: 0.8em !important;
+   
+  }
+  .item[no-lines].bottom-border { 
+    border-bottom: 1px solid #27509b; 
+    border-width: 2px;
+    background:white;
+    margin-left: 20px;
+    width: 100%;
+    text-align: left;
+    padding-left: 0px;
+  }  
+  .item[no-lines].top-border { 
+    border-bottom: 1px solid #27509b; 
+    border-width: 2px;
+    background:rgb(235, 235, 235);
+    margin-left: 2%;
+    width: 92%;
+    text-align: left;
+    padding-left: 0px;
+  }
+  
+  .top-border1 { 
+    border-bottom: 1px solid #27509b; 
+    border-width: 1.8px;
+    background:rgb(235, 235, 235);
+    margin-left: 2%;
+    width: 92%;
+    text-align: left;
+    padding-left: 0px;
+  }
+
+  .top-border2 { 
+    border-bottom: 1px solid #27509b; 
+    border-width: 1.8px;
+    background:rgb(235, 235, 235);
+    margin-left: 2%;
+    width: 92%;
+    text-align: left;
+    padding-left: 0px;
+  }
+
+  .item[no-lines].bottom-border-yellow { 
+    border-bottom: 1px solid #FCE500; 
+    border-width: 2px;
+    background:white;
+    margin-left: 20px;
+    width: 92%;
+    text-align: left;
+    padding-left: 0px;
+  }  
+
+  .stacked-formfield label {
+    background: white;
+    display: block;
+    width: 100%;
+    color: #27509b;
+    font-size: 0.8em ;
+    // line-height: 1em;
+    // padding: .125em .75em;
+    // margin: 0;
+    // -webkit-box-sizing: border-box;
+    // -moz-box-sizing: border-box;
+    // box-sizing: border-box;
+    font-family: Arial  !important;
+    // font-weight: bold !important;
+
+  }
+  
+  
+  .stacked-formfield input {
+    border: 0;
+    width: 100%;
+    background: none;
+    padding: 0;
+    font-size: 0.7em;
+    color: #333;
+    // height: 27px;
+    // -webkit-box-sizing: border-box;
+    // -moz-box-sizing: border-box;
+    // box-sizing: border-box;
+    font-family: Arial !important;
+    // font-weight: bold !important;
+    // -webkit-box-shadow:  0 -1px 0 0 white !important;
+    // border-bottom-color: white !important;
+    // box-shadow: 0 -1px 0 0 white !important;
+  }
+  
+  .stacked-formfield input.pending-select {
+    opacity: 0.3
+  }
+  
+  .stacked-formfield select {
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    // -webkit-box-sizing: border-box;
+    // -moz-box-sizing: border-box;
+    // box-sizing: border-box;
+    z-index: 100;
+    font-family: Arial !important;
+  
+  }
+  
+  .stacked-formfield .downarrow {
+    width: 0;
+    height: 0;
+    // border-left: 6px solid transparent;
+    // border-right: 6px solid transparent;
+    // border-top: 8px solid #333;
+    position: absolute;
+    right: 14px;
+    bottom: .625em;
+    top: 10px;
+  }
+  //All Input box style setup here
+  .stacked-formfield .big-input {
+    // padding: 5px 10px 0 10px;
+    // height: auto;
+    font-size: 1.0em;
+    font-weight: normal;
+    font-family: Arial !important;
+    color: #333;
+    text-align: left;
+    // margin-left: -105px;
+    
+  }
+  
+  .stacked-formfield optgroup {
+    color: #27509b
+  
+  }
+  
+  .stacked-formfield option {
+    color: #333
+  }
+  
+  .stacked-formfield.invalid input {
+    background: #ffdfdf
+  }
+  
+  .stacked-formfield.currency input {
+    padding-left: 25px
+  }
+  
+  .stacked-formfield.currency .dollarsign {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font: 0.1em Arial;
+    color: #333;
+    // line-height: 1em;
+    width: 15px;
+    // height: 21px;
+    text-align: right
+  }
+  
+  @font-face {
+    font-family: "michelin-regular-webfont";
+    src: url('../assets/fonts/michelin-regular-webfont.eot') format('eot');  
+    src: url("../assets/fonts/michelin-regular-webfont.woff2") format("woff2"),
+        url('../assets/fonts/michelin-regular-webfont.woff') format('woff');
+    // font-weight: bold;
+    // font-style: italic;
+    }
+    @media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px){ 
+      .header_text{
+        vertical-align: middle;
+        text-align: center;
+        color: #ffffff ;
+        // font-family: Arial;
+        font-family: "michelin-regular-webfont";
+        font-size: 10px !important;
+        font-weight: bold !important;
+        font-size: 0.8em !important;
+        
+      }
+    }      
+
+    @media only screen and (max-device-width: 1024px), only screen and (max-device-width: 768px), only screen and (max-width: 480px) and (orientation : portrait){ 
+      
+    } 
+    @media only screen and (max-device-width: 768px), only screen and (max-device-width: 1400px), only screen and (max-width: 480px) and (orientation : landscape){ 
+      
+    }      
